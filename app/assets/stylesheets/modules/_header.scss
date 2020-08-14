@@ -1,0 +1,38 @@
+.header {
+  padding: 10px;
+  border-bottom: 1px solid #d8d8d8;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  height: 62px;
+  &__bar {
+    position: relative;
+    &__left {
+      font-size: 20px;
+      line-height: 41px;
+      float: left;
+      margin-left: 100px;
+    }
+    &__right {
+      text-align: right;
+      float: right;
+      margin-right: 100px;
+      .header-link {
+        width: 120px;
+        margin-left: 20px;
+        display: inline-block;
+        padding: 8px 20px;
+        font-size: 14px;
+        border: 2px solid #57c3e9;
+        color: #57c3e9;
+        font-weight: bold;
+        text-align: center;
+        border-radius: 3px;
+        text-decoration: none;
+      }
+    }
+  }
+}
