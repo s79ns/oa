@@ -1,3 +1,20 @@
 .form {
-  margin-top: 70px;
+  text-align: center;
+  padding-top: 50px;
+  &__input {
+    width: 30%;
+    margin-right: 10px;
+    padding: 10px;
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+  }
+  &__btn {
+    background-color: #57c3e9;
+    border-radius: 20px;
+    color: #fff;
+    border: 0;
+    font-size: 18px;
+    width: 10%;
+    padding: 10px;
+  }
 }
