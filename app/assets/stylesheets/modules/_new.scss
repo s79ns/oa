@@ -1,4 +1,4 @@
-// registrations/new.html.haml及び、sessions/new.html.hamlのクラスを共有しています
+// registrations/new.html.haml、sessions/new.html.haml、posts/new.html.hamlのクラスを共有しています
 
 .contents {
   width: 100%;
@@ -25,7 +25,10 @@
       border: 1px solid #d8d8d8;
       border-radius: 5px;
     }
-    .signup-botton {
+    .text-form {
+      width: 100%;
+    }
+    .action-botton {
       background-color: #57c3e9;
       border-radius: 20px;
       color: white;
