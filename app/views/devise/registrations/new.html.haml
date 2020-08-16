@@ -8,8 +8,7 @@
       .field
         = f.label :nickname
         %br/
-        -# ニックネームとりあえず仮置きです
-        = f.email_field :email, autofocus: true, autocomplete: "nickname"
+        = f.text_field :nickname, autofocus: true, maxlength: "6"
       .field
         = f.label :email
         %br/
