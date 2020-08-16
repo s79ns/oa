@@ -21,7 +21,6 @@
       float: right;
       margin-right: 100px;
       li.header-bar-item {
-        width: 120px;
         margin-left: 20px;
         font-size: 14px;
         border: 2px solid #57c3e9;
@@ -29,11 +28,16 @@
         text-align: center;
         border-radius: 3px;
         display: inline-block;
+        p {
+          color: #57c3e9;
+          padding: 8px 20px;
+        }
         a {
           text-decoration: none;
           color: #57c3e9;
           display: block;
           padding: 8px 20px;
+          white-space: nowrap;
         }
         a:hover {
           opacity: 0.7;
