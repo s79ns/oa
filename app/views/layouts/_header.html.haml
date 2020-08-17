@@ -12,6 +12,6 @@
           = link_to "ログアウト", destroy_user_session_path, method: :delete
       - else
         %li.header-bar-item
-          = link_to "ログイン"
+          = link_to "ログイン", new_user_session_path, method: :get
         %li.header-bar-item
           = link_to "新規登録"
