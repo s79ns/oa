@@ -9,7 +9,7 @@
           %p
             ログインしています
         %li.header-bar-item
-          = link_to "ログアウト"
+          = link_to "ログアウト", destroy_user_session_path, method: :delete
       - else
         %li.header-bar-item
           = link_to "ログイン"
