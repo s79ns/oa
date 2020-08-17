@@ -2,12 +2,13 @@
   .header__bar
     .header__bar__left
       ようこそ！
+      - if user_signed_in?
+        = "#{current_user.nickname}さん"
     .header__bar__right
       %ul.header-item
       - if user_signed_in?
         %li.header-bar-item
-          %p
-            ログインしています
+          = link_to "新規投稿", new_post_path, method: :get
         %li.header-bar-item
           = link_to "ログアウト", destroy_user_session_path, method: :delete
       - else
