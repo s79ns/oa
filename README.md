@@ -6,7 +6,7 @@
 
 <img src="https://github.com/s79ns/oa/blob/master/app/assets/images/ruby-logo.png" width="12%">
 <img src="https://github.com/s79ns/oa/blob/master/app/assets/images/rails_logo.png" width="12%">
-<img src="https://github.com/s79ns/oa/blob/master/app/assets/images/haml.jpg" width="12%">
+<img src="https://github.com/s79ns/oa/blob/master/app/assets/images/haml.png" width="12%">
 <img src="https://github.com/s79ns/oa/blob/master/app/assets/images/sass.png" width="12%">
 <img src="https://github.com/s79ns/oa/blob/master/app/assets/images/mysql.png" width="12%">
 
