@@ -1,11 +1,14 @@
 # :pushpin: アプリ紹介
 
 ![紹介](https://gyazo.com/98138a84fa5b05ec9af8c50450119bb0.png "紹介")
-<img src="https://github.com/s79ns/oa/blob/master/app/assets/images/ruby-logo.png" width="15%">
-<img src="https://github.com/s79ns/oa/blob/master/app/assets/images/rails_logo.png" width="15%">
-<img src="https://github.com/s79ns/oa/blob/master/app/assets/images/haml.jpg" width="15%">
-<img src="https://github.com/s79ns/oa/blob/master/app/assets/images/sass.png" width="15%">
-<img src="https://github.com/s79ns/oa/blob/master/app/assets/images/mysql.png" width="15%">
+
+## :computer: 主な使用言語
+
+<img src="https://github.com/s79ns/oa/blob/master/app/assets/images/ruby-logo.png" width="18%">
+<img src="https://github.com/s79ns/oa/blob/master/app/assets/images/rails_logo.png" width="18%">
+<img src="https://github.com/s79ns/oa/blob/master/app/assets/images/haml.jpg" width="18%">
+<img src="https://github.com/s79ns/oa/blob/master/app/assets/images/sass.png" width="18%">
+<img src="https://github.com/s79ns/oa/blob/master/app/assets/images/mysql.png" width="18%">
 
 ## :speech_balloon: アプリケーション名
 
