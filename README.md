@@ -24,6 +24,8 @@ easy chat
 
 ## :credit_card: ライセンス
 
+MIT
+
 ## :wink: 作者
 
 s79ns
