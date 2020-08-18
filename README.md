@@ -2,7 +2,7 @@
 
 ## アプリケーション名
 
-_easy chat_
+easy chat
 
 ## :eyes: 機能紹介
 
@@ -15,12 +15,12 @@ _easy chat_
 
 ## :memo: インストール方法
 
-git clone https://github.com/s79ns/oa.git
-$ cd oa
-$ bundle install
-$ rails db:create
-$ rails db:migrate
-\$ rails s
+git clone https://github.com/s79ns/oa.git  
+$ cd oa  
+$ bundle install  
+$ rails db:create  
+$ rails db:migrate  
+\$ rails s  
 👉 http://localhost:3000
 
 ## :speech_balloon: ライセンス
