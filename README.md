@@ -1,17 +1,19 @@
 # :exclamation: アプリ紹介
 
-# アプリケーション名
+## アプリケーション名
 
-easy chat
+_easy chat_
 
-# :eyes: 機能紹介
+## :eyes: 機能紹介
 
-簡易チャットアプリです。
-新規登録後、ユーザー情報編集・新規投稿・投稿内容の編集・削除機能を使う事ができます。
+簡易チャットアプリです。ユーザー新規登録・新規投稿・投稿内容編集・削除ができます。
+・未ログイン時、新規投稿画面へ移動するとトップページへリダイレクトします
 
-# :green_book: 使い方
+## :green_book: 使い方
 
-# :memo: インストール方法
+ユーザーの新規登録後、ユーザー情報編集・新規投稿・投稿内容の編集・削除機能を使用する事ができます。
+
+## :memo: インストール方法
 
 git clone https://github.com/s79ns/oa.git
 $ cd oa
@@ -21,9 +23,9 @@ $ rails db:migrate
 \$ rails s
 👉 http://localhost:3000
 
-# :speech_balloon: ライセンス
+## :speech_balloon: ライセンス
 
-# :wink: 作者
+## :wink: 作者
 
 s79ns
 
