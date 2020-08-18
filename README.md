@@ -1,6 +1,6 @@
 # :pushpin: アプリ紹介
 
-![紹介](https://gyazo.com/f5977b2813b0f476d5ffc8a4ed7eede6)
+![紹介](https://gyazo.com/f5977b2813b0f476d5ffc8a4ed7eede6.png "紹介")
 
 ## :speech_balloon: アプリケーション名
 
