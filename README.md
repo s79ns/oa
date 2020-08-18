@@ -14,7 +14,8 @@
 
 # インストール方法
 
-$ git clone git@github.com:s79ns/oa.git
+git clone https://github.com/s79ns/oa.git
+$
 $ cd oa
 $ bundle install
 $ rails db:create
