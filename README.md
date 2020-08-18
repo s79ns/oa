@@ -1,4 +1,4 @@
-# :exclamation: アプリ紹介
+# :pushpin: アプリ紹介
 
 ## アプリケーション名
 
@@ -6,22 +6,21 @@ easy chat
 
 ## :eyes: 機能紹介
 
-簡易チャットアプリです。ユーザー新規登録・新規投稿・投稿内容編集・削除ができます。
-・未ログイン時、新規投稿画面へ移動するとトップページへリダイレクトします
+簡易チャットアプリです。ユーザー新規登録・新規投稿・投稿内容編集・削除ができます。 ・未ログイン時、新規投稿画面へ移動するとトップページへリダイレクトします
 
 ## :green_book: 使い方
 
-ユーザーの新規登録後、ユーザー情報編集・新規投稿・投稿内容の編集・削除機能を使用する事ができます。
+ユーザー新規登録後、ユーザー情報編集・新規投稿・投稿内容の編集・削除機能を使用する事ができます。
 
 ## :memo: インストール方法
 
-git clone https://github.com/s79ns/oa.git  
+git clone `https://github.com/s79ns/oa.git`  
 $ cd oa  
 $ bundle install  
 $ rails db:create  
 $ rails db:migrate  
 \$ rails s  
-👉 http://localhost:3000
+👉 `http://localhost:3000`
 
 ## :speech_balloon: ライセンス
 
