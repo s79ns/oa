@@ -24,7 +24,7 @@ easy chat
 
 ## :credit_card: ライセンス
 
-MIT
+[MIT](https://raw.githubusercontent.com/s79ns/oa/master/LICENSE "MIT")
 
 ## :wink: 作者
 
