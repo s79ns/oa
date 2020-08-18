@@ -14,7 +14,13 @@
 
 # インストール方法
 
-・
+$ git clone git@github.com:s79ns/oa.git
+$ cd oa
+$ bundle install
+$ rails db:create
+$ rails db:migrate
+$ rails s
+👉 http://localhost:3000
 
 # ライセンス
 
