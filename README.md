@@ -4,7 +4,7 @@
 
 ## :computer: 主な使用言語
 
-<img src="https://github.com/s79ns/oa/blob/master/app/assets/images/ruby-logo.png" width="12%"><img src="https://github.com/s79ns/oa/blob/master/app/assets/images/rails_logo.png" width="12%"><img src="https://github.com/s79ns/oa/blob/master/app/assets/images/haml.png" width="12%"><img src="https://github.com/s79ns/oa/blob/master/app/assets/images/sass.png" width="12%"><img src="https://github.com/s79ns/oa/blob/master/app/assets/images/mysql.png" width="12%">
+<img src="https://github.com/s79ns/oa/blob/master/app/assets/images/ruby-logo.png" width="20%"><img src="https://github.com/s79ns/oa/blob/master/app/assets/images/rails_logo.png" width="20%"><img src="https://github.com/s79ns/oa/blob/master/app/assets/images/haml.png" width="20%"><img src="https://github.com/s79ns/oa/blob/master/app/assets/images/sass.png" width="20%"><img src="https://github.com/s79ns/oa/blob/master/app/assets/images/mysql.png" width="20%">
 
 ## :speech_balloon: アプリケーション名
 
