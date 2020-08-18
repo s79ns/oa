@@ -4,14 +4,14 @@
 
 easy chat
 
-# \:eyes:機能紹介
+# :eyes: 機能紹介
 
 簡易チャットアプリです。
 新規登録後、ユーザー情報編集・新規投稿・投稿内容の編集・削除機能を使う事ができます。
 
 # 使い方
 
-# インストール方法
+# :green_book: インストール方法
 
 git clone https://github.com/s79ns/oa.git
 $
@@ -24,7 +24,7 @@ $ rails s
 
 # ライセンス
 
-# :wink:作者
+# :wink: 作者
 
 s79ns
 
