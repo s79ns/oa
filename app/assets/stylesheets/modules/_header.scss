@@ -15,6 +15,14 @@
       line-height: 41px;
       float: left;
       margin-left: 100px;
+      display: flex;
+      &__name {
+        a {
+          text-decoration: none;
+          font-weight: bold;
+          color: #57c3e9;
+        }
+      }
     }
     &__right {
       text-align: right;
