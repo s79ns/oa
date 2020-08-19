@@ -3,7 +3,7 @@
     .header__bar__left
       ようこそ！
       - if user_signed_in?
-        = "#{current_user.nickname}さん"
+        = link_to "#{current_user.nickname}さん", edit_user_registration_path, method: :get
     .header__bar__right
       %ul.header-item
       - if user_signed_in?
