@@ -37,5 +37,25 @@
       font-size: 18px;
       margin-top: 30px;
     }
+    .success {
+      text-align: center;
+      &__btn {
+        border: 2px solid #57c3e9;
+        border-radius: 3px;
+        display: inline-block;
+        margin-top: 15px;
+        a.btn {
+          font-weight: bold;
+          display: inline-block;
+          text-decoration: none;
+          color: #57c3e9;
+          padding: 8px 20px;
+          white-space: nowrap;
+        }
+        a:hover {
+          opacity: 0.7;
+        }
+      }
+    }
   }
 }
