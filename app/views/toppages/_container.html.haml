@@ -8,4 +8,8 @@
       = post.name
     .message__text
       = post.text
-      = link_to '削除', post_path(post.id), method: :delete
+      .edit-actions
+        = link_to post_path(post.id), method: :delete, class:"edit-actions-btn" do
+          編集
+        = link_to post_path(post.id), method: :delete, class:"edit-actions-btn" do
+          削除
