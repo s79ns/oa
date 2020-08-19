@@ -33,4 +33,16 @@
   &__name {
     padding: 12px 0;
   }
+  .edit-actions {
+    display: inline-block;
+  }
+  .edit-actions-btn {
+    background-color: #57c3e9;
+    border-radius: 15px;
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    margin-left: 5px;
+  }
 }
