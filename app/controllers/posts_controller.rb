@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :move_to_index, except: [:index, :show]
+  before_action :move_to_index, except: [:index, :show, :search]
 
   def index
     redirect_to root_path
@@ -25,6 +25,10 @@ class PostsController < ApplicationController
   def update
     post = Post.find(params[:id])
     post.update(post_params)
+  end
+
+  def search
+    @posts = Post.search(params[:keyword])
   end
 
   private
