@@ -6,7 +6,7 @@
   - @posts.each do |post|
     .message__name
       = post.name
-      何時何分
+      %time(datetime="#{post.created_at}")= time_ago_in_words(post.created_at)
     .message__text
       = post.text
       .edit-actions
