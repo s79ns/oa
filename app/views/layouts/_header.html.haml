@@ -7,13 +7,20 @@
           = link_to "#{current_user.nickname}さん", edit_user_registration_path, method: :get
     .header__bar__right
       %ul.header-item
-      - if user_signed_in?
-        %li.header-bar-item
-          = link_to "新規投稿", new_post_path, method: :get
-        %li.header-bar-item
-          = link_to "ログアウト", destroy_user_session_path, method: :delete
-      - else
-        %li.header-bar-item
-          = link_to "ログイン", new_user_session_path, method: :get
-        %li.header-bar-item
-          = link_to "新規登録", new_user_registration_path, method: :get
+        %li.dark-mode
+          = form_with url: "/" do |form|
+            ダークモード
+            = form.radio_button :darkmode, class: "dark-mode-form"
+            ON
+            = form.radio_button :darkmode, checked=checked, class: "dark-mode-form"
+            OFF
+        - if user_signed_in?
+          %li.header-bar-item
+            = link_to "新規投稿", new_post_path, method: :get
+          %li.header-bar-item
+            = link_to "ログアウト", destroy_user_session_path, method: :delete
+        - else
+          %li.header-bar-item
+            = link_to "ログイン", new_user_session_path, method: :get
+          %li.header-bar-item
+            = link_to "新規登録", new_user_registration_path, method: :get

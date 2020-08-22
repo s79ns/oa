@@ -28,27 +28,36 @@
       text-align: right;
       float: right;
       margin-right: 100px;
-      li.header-bar-item {
-        margin-left: 20px;
-        font-size: 14px;
-        border: 2px solid #57c3e9;
-        font-weight: bold;
-        text-align: center;
-        border-radius: 3px;
-        display: inline-block;
-        p {
-          color: #57c3e9;
-          padding: 8px 20px;
+      ul.header-item {
+        display: flex;
+        li.dark-mode {
+          line-height: 40px;
+          border: 1px solid gray;
+          border-radius: 3px;
+          padding: 0 10px;
         }
-        a {
-          text-decoration: none;
-          color: #57c3e9;
-          display: block;
-          padding: 8px 20px;
-          white-space: nowrap;
-        }
-        a:hover {
-          opacity: 0.7;
+        li.header-bar-item {
+          margin-left: 20px;
+          font-size: 14px;
+          border: 2px solid #57c3e9;
+          font-weight: bold;
+          text-align: center;
+          border-radius: 3px;
+          display: inline-block;
+          p {
+            color: #57c3e9;
+            padding: 8px 20px;
+          }
+          a {
+            text-decoration: none;
+            color: #57c3e9;
+            display: block;
+            padding: 8px 20px;
+            white-space: nowrap;
+          }
+          a:hover {
+            opacity: 0.7;
+          }
         }
       }
     }
