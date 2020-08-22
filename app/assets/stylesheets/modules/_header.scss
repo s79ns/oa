@@ -32,6 +32,9 @@
         display: flex;
         li.dark-mode {
           line-height: 40px;
+          border: 1px solid gray;
+          border-radius: 3px;
+          padding: 0 10px;
         }
         li.header-bar-item {
           margin-left: 20px;
