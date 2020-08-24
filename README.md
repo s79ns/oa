@@ -1,6 +1,6 @@
 # :pushpin: アプリ紹介
 
-![紹介](https://gyazo.com/98138a84fa5b05ec9af8c50450119bb0.png "紹介")
+<img src="https://github.com/s79ns/oa/blob/read-me%E6%A9%9F%E8%83%BD%E8%BF%BD%E5%8A%A0%E3%81%AE%E7%82%BA%E3%80%81%E7%B7%A8%E9%9B%86/app/assets/images/readme%E7%B4%B9%E4%BB%8B.png">
 
 ## :computer: 主な使用言語・ソフトウェア
 
