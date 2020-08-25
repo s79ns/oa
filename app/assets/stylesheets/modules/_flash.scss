@@ -1,0 +1,18 @@
+.Notification {
+  position: relative;
+  top: 62px;
+  z-index: 10;
+  .notice {
+    background-color: #38aef0;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+  }
+
+  .alert {
+    background-color: #f35500;
+    color: #fff;
+    text-align: center;
+  }
+}
