@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: {
-    registrations: 'users/registrations'
+    registrations: 'registrations'
   }
-
   get 'toppages/index'
   root "toppages#index"
   resources :posts do
