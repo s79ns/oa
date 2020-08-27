@@ -22,6 +22,11 @@
     %hr
     %h4.debug-tool-text
       リダイレクト
-    %li.debug-tool-item1
+    %li.debug-tool-item
       = link_to "新規投稿", new_post_path, method: :get
+    %hr
+    %h4.debug-tool-text
+      アカウント削除
+    %li.debug-tool-item
+      = link_to "アカウント削除", user_registration_path, method: :delete
     %hr
