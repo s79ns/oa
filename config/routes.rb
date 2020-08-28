@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: {
     registrations: 'registrations'
+    passwords: 'registrations'
   }
   get 'toppages/index'
   root "toppages#index"
