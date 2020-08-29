@@ -1,6 +1,6 @@
 # :pushpin: アプリ紹介
 
-<img src="https://github.com/s79ns/oa/blob/master/app/assets/images/readme%E7%B4%B9%E4%BB%8B.png">
+<img src="https://github.com/s79ns/oa/blob/master/app/assets/images/readme%E7%B4%B9%E4%BB%8B.gif">
 
 ## :computer: 主な使用言語・ソフトウェア
 
