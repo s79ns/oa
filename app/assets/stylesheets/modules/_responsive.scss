@@ -1,6 +1,9 @@
 @media screen and (max-width: 768px) {
   .main-container {
     flex-direction: column;
+    .message {
+      margin-bottom: 30px;
+    }
     ul.debug-tool {
       margin: 0 auto;
       width: 80%;
