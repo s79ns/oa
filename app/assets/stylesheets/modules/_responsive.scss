@@ -1,0 +1,52 @@
+@media screen and (max-width: 768px) {
+  .header {
+    height: initial;
+    padding: 0 80px;
+    &__bar {
+      &__left {
+        display: block;
+        margin-left: initial;
+        margin-top: 20px;
+      }
+      &__right {
+        margin-right: initial;
+        ul.header-item {
+          display: initial;
+          li.dark-mode {
+            margin-top: 15px;
+            padding-right: 30px;
+          }
+          li.header-bar-item {
+            margin: 10px;
+          }
+        }
+      }
+    }
+  }
+  .main-container {
+    flex-direction: column;
+    // margin-top: 50px;
+    .message {
+      margin-bottom: 30px;
+    }
+    ul.debug-tool {
+      margin: 0 auto;
+      width: 80%;
+    }
+  }
+  // _new.scssのクラス
+  .contents {
+    padding-top: 120px;
+  }
+  // _flash.scssのクラス
+  .Notification {
+    top: 117px;
+    z-index: 1;
+    .notice {
+      position: initial;
+    }
+    .alert {
+      position: initial;
+    }
+  }
+}

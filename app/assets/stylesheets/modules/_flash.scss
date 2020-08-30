@@ -1,6 +1,6 @@
 .Notification {
   position: relative;
-  top: 62px;
+  top: 80px;
   z-index: 10;
   .notice {
     background-color: #005fff;
@@ -9,10 +9,11 @@
     position: absolute;
     width: 100%;
   }
-
   .alert {
     background-color: #f35500;
     color: #fff;
     text-align: center;
+    position: absolute;
+    width: 100%;
   }
 }
