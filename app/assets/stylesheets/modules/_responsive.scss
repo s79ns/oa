@@ -1,8 +1,29 @@
 @media screen and (max-width: 768px) {
   .header {
+    height: initial;
+    padding: initial;
+    &__bar {
+      &__left {
+        display: initial;
+        margin: 20px 0 0 80px;
+      }
+      &__right {
+        ul.header-item {
+          display: initial;
+          li.dark-mode {
+            margin-top: 15px;
+            padding-right: 30px;
+          }
+          li.header-bar-item {
+            margin: 10px;
+          }
+        }
+      }
+    }
   }
   .main-container {
     flex-direction: column;
+    margin-top: 50px;
     .message {
       margin-bottom: 30px;
     }
