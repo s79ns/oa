@@ -1,0 +1,9 @@
+@media screen and (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+    ul.debug-tool {
+      margin: 0 auto;
+      width: 80%;
+    }
+  }
+}
