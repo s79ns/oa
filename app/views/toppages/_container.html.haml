@@ -1,5 +1,8 @@
 .main-container
   .message
+    %h4.debug-tool-text
+      %i.fas.fa-comment-dots.fa-2x
+      メッセージ一覧
     - @posts.each do |post|
       .message__name
         = "#{post.name}："
