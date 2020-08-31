@@ -70,7 +70,13 @@ ul.debug-tool {
     letter-spacing: 0.5px;
     color: #272727;
     i.fa-exclamation-circle {
-      color: blue;
+      color: #1e90ff;
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+    }
+    i.fa-exclamation-circle:hover {
+      display: inline;
     }
   }
   hr {
