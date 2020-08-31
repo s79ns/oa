@@ -15,8 +15,6 @@
   border-radius: 10px;
   box-shadow: 0 0 3px grey;
   &__name {
-    padding: 12px 0;
-    margin-left: 20px;
     time {
       color: #57c3e9;
       font-size: 14px;
@@ -26,6 +24,7 @@
     position: relative;
     display: inline-block;
     margin: 1.5em 0;
+    margin-left: 20px;
     padding: 7px 10px;
     min-width: 120px;
     max-width: 100%;
@@ -34,19 +33,21 @@
     border-radius: 12px;
     :before {
       content: "";
+      display: inline-block;
       position: absolute;
-      top: -30px;
-      left: 30%;
-      margin-left: -15px;
-      border: 15px solid transparent;
-      border-bottom: 15px solid #87cefa;
+      top: 3px;
+      left: -19px;
+      border: 8px solid transparent;
+      border-right: 18px solid #87cefa;
+      -webkit-transform: rotate(35deg);
+      transform: rotate(35deg);
     }
   }
   .edit-actions {
     display: inline-block;
   }
   .edit-actions-btn {
-    background-color: #57c3e9;
+    background-color: #3399ff;
     border-radius: 15px;
     padding: 5px;
     text-decoration: none;
