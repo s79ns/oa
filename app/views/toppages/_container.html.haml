@@ -1,8 +1,9 @@
 .main-container
   .message
-    %h4.debug-tool-text
+    .message__top-title
       %i.fas.fa-comment-dots.fa-2x
       メッセージ一覧
+    %hr
     - @posts.each do |post|
       .message__name
         = "#{post.name}："
