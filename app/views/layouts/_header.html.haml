@@ -10,9 +10,9 @@
         %li.dark-mode
           = form_with url: "/" do |form|
             ダークモード
-            = form.radio_button :darkmode, class: "dark-mode-form"
+            = form.check_box :darkmode, class: "dark-mode-form"
             ON
-            = form.radio_button :darkmode, checked=checked, class: "dark-mode-form"
+            = form.check_box :darkmode, class: "dark-mode-form"
             OFF
         - if user_signed_in?
           %li.header-bar-item
