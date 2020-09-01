@@ -24,6 +24,11 @@
     margin-bottom: 30px;
   }
   &__name {
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 300;
+    color: #666;
+
     time {
       color: #57c3e9;
       font-size: 14px;
@@ -82,7 +87,6 @@ ul.debug-tool {
       color: #1e90ff;
       position: relative;
       display: inline-block;
-      cursor: pointer;
     }
     .tooltiptext {
       position: absolute;
