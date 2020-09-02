@@ -10,8 +10,19 @@
       }
       &__right {
         margin-right: initial;
+        display: flex;
+        padding-top: 20px;
         ul.header-item {
-          display: initial;
+          // display: initial;
+          display: flex;
+          li.toggle-infomation {
+            display: flex;
+            align-items: center;
+            font-size: 13px;
+          }
+          li.toggle-switch {
+            height: initial;
+          }
           li.dark-mode {
             margin-top: 15px;
             padding-right: 30px;
