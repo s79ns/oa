@@ -32,6 +32,7 @@
       ul.header-item {
         display: flex;
         .darkmode-text {
+          color: #272727;
           margin: 10px;
         }
 
@@ -96,6 +97,7 @@
           height: 42px;
           margin: auto;
           display: flex;
+          align-items: center;
         }
         li.header-bar-item {
           margin-left: 20px;
