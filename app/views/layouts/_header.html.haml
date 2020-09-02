@@ -7,14 +7,11 @@
           = link_to "#{current_user.nickname}さん", edit_user_registration_path, method: :get
     .header__bar__right
       %ul.header-item
-        %li.dark-mode
-          -# = form_with url: "/" do |form|
-          -#   ダークモード
-          -#   = form.check_box :darkmode, class: "dark-mode-form"
-        .toggle-switch
+        %li.toggle-switch
+          .darkmode-text
+            ダークモード
           %input#toggle.toggle-input{:type => "checkbox"}/
           %label.toggle-label{:for => "toggle"}
-
         - if user_signed_in?
           %li.header-bar-item
             = link_to "新規投稿", new_post_path, method: :get

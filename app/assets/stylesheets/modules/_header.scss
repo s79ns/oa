@@ -31,10 +31,10 @@
       margin-right: 100px;
       ul.header-item {
         display: flex;
-        li.dark-mode {
-          line-height: 40px;
-          padding: 0 10px;
+        .darkmode-text {
+          margin: 10px;
         }
+
         .toggle-input {
           position: absolute;
           left: 0;
@@ -48,8 +48,8 @@
 
         // label
         .toggle-label {
-          width: 75px;
-          height: 42px;
+          width: 50px;
+          height: 30px;
           background: #ccc;
           position: relative;
           display: inline-block;
@@ -59,8 +59,8 @@
           &:after {
             content: "";
             position: absolute;
-            width: 42px;
-            height: 42px;
+            width: 30px;
+            height: 30px;
             border-radius: 100%;
             left: 0;
             top: 0;
@@ -74,9 +74,9 @@
         // input:ckeecked
         .toggle-input:checked {
           + .toggle-label {
-            background-color: #4bd865;
+            background-color: #57c3e9;
             &:after {
-              left: 40px;
+              left: 25px;
             }
           }
         }
@@ -91,11 +91,11 @@
           margin: auto;
         }
 
-        .toggle-switch {
+        li.toggle-switch {
           position: relative;
-          width: 75px;
           height: 42px;
           margin: auto;
+          display: flex;
         }
         li.header-bar-item {
           margin-left: 20px;
