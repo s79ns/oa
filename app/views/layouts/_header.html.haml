@@ -7,12 +7,13 @@
           = link_to "#{current_user.nickname}さん", edit_user_registration_path, method: :get
     .header__bar__right
       %ul.header-item
-        %li.toggle-switch
+        %li.toggle-infomation
           %i.fas.fa-exclamation-circle
             .tooltiptext
               黒を基調とした背景でページを閲覧できます
           .darkmode-text
             ダークモード
+        %li.toggle-switch
           %input#toggle.toggle-input{:type => "checkbox"}/
           %label.toggle-label{:for => "toggle"}
         - if user_signed_in?
