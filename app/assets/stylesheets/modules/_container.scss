@@ -83,41 +83,6 @@ ul.debug-tool {
     font-weight: 600;
     letter-spacing: 0.5px;
     color: #272727;
-    i.fa-exclamation-circle {
-      color: #1e90ff;
-      position: relative;
-      display: inline-block;
-    }
-    .tooltiptext {
-      position: absolute;
-      z-index: 1;
-      bottom: 100%;
-      bottom: 30px;
-      right: -115px;
-      visibility: hidden;
-      width: auto;
-      white-space: nowrap;
-      padding: 0.3em 0.5em;
-      transition: opacity 1s;
-      text-align: center;
-      opacity: 0;
-      color: #ffffff;
-      border-radius: 6px;
-      background-color: #1e90ff;
-    }
-    i.fa-exclamation-circle .tooltiptext::after {
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      margin-left: -5px;
-      content: " ";
-      border: 5px solid transparent;
-      border-top-color: #1e90ff;
-    }
-    i.fa-exclamation-circle:hover .tooltiptext {
-      visibility: visible;
-      opacity: 1;
-    }
   }
   hr {
     width: 80%;
@@ -142,4 +107,39 @@ ul.debug-tool {
       white-space: nowrap;
     }
   }
+}
+i.fa-exclamation-circle {
+  color: #1e90ff;
+  position: relative;
+  display: inline-block;
+}
+i.fa-exclamation-circle .tooltiptext::after {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  content: " ";
+  border: 5px solid transparent;
+  border-top-color: #1e90ff;
+}
+i.fa-exclamation-circle:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+.tooltiptext {
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  bottom: 30px;
+  right: -115px;
+  visibility: hidden;
+  width: auto;
+  white-space: nowrap;
+  padding: 0.3em 0.5em;
+  transition: opacity 1s;
+  text-align: center;
+  opacity: 0;
+  color: #ffffff;
+  border-radius: 6px;
+  background-color: #1e90ff;
 }
