@@ -13,11 +13,9 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     if @post.save
-      # redirect_to root_path, notice: 'メッセージが送信されました'
     else
-      # @post = @post.includes(:user)
-      flash.now[:alert] = 'メッセージを入力してください'
-      redirect_to root_path
+      @post = Post.includes(:user)
+      redirect_to root_path, alert: '新規投稿に失敗しました'
     end
   end
 
