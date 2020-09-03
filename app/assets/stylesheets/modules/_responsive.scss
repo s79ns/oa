@@ -10,10 +10,9 @@
       }
       &__right {
         margin-right: initial;
-        display: flex;
         padding-top: 20px;
         ul.header-item {
-          display: flex;
+          display: -webkit-box;
           li.toggle-infomation {
             display: flex;
             align-items: center;
@@ -21,6 +20,13 @@
           }
           li.toggle-switch {
             height: initial;
+          }
+          .darkmode-tooltiptext {
+            left: initial;
+          }
+          i.fa-exclamation-circle .darkmode-tooltiptext::after {
+            top: -50%;
+            margin-left: -90px;
           }
           li.header-bar-item {
             margin: 10px;
