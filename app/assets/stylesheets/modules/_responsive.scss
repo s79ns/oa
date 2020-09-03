@@ -10,11 +10,23 @@
       }
       &__right {
         margin-right: initial;
+        padding-top: 20px;
         ul.header-item {
-          display: initial;
-          li.dark-mode {
-            margin-top: 15px;
-            padding-right: 30px;
+          display: -webkit-box;
+          li.toggle-infomation {
+            display: flex;
+            align-items: center;
+            font-size: 13px;
+          }
+          li.toggle-switch {
+            height: initial;
+          }
+          .darkmode-tooltiptext {
+            left: initial;
+          }
+          i.fa-exclamation-circle .darkmode-tooltiptext::after {
+            top: -50%;
+            margin-left: -90px;
           }
           li.header-bar-item {
             margin: 10px;
@@ -40,8 +52,9 @@
   }
   // _flash.scssのクラス
   .Notification {
-    top: 117px;
-    z-index: 1;
+    top: -30px;
+    z-index: 6;
+    margin-top: 30px;
     .notice {
       position: initial;
     }
