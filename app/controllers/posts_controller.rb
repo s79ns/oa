@@ -11,7 +11,12 @@ class PostsController < ApplicationController
   end
 
   def create
-    Post.create(post_params)
+    @post = Post.new(post_params)
+    if @post.save
+    else
+      @post = Post.includes(:user)
+      redirect_to root_path, alert: '新規投稿に失敗しました'
+    end
   end
 
   def destroy
