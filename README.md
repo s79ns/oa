@@ -16,7 +16,7 @@ easy chat
 未ログイン時、新規投稿画面にアクセスするとトップページへリダイレクトします。<br>
 <br>👉 その他機能<br>
 ・ゲストログイン：新規登録をせずログインができます。（登録情報の編集・削除は不可）<br>
-・ダークモード：黒を基調とした背景でページを閲覧することができます。[こちら](https://github.com/s79ns/oa/blob/master/app/assets/images/%E3%83%80%E3%83%BC%E3%82%AF%E3%83%A2%E3%83%BC%E3%83%89%E7%B4%B9%E4%BB%8B.gif "レスポンシブWebデザイン")からご覧下さい。
+・ダークモード：黒を基調とした背景でページを閲覧することができます。[こちら](https://github.com/s79ns/oa/blob/master/app/assets/images/%E3%83%80%E3%83%BC%E3%82%AF%E3%83%A2%E3%83%BC%E3%83%89%E7%B4%B9%E4%BB%8B.gif "ダークモード")からご覧下さい。<br>
 ・レスポンシブ Web デザイン：ブレイクポイント 768px で設定しています。[こちら](https://github.com/s79ns/oa/blob/master/app/assets/images/%E3%83%AC%E3%82%B9%E3%83%9D%E3%83%B3%E3%82%B7%E3%83%96%E3%82%A6%E3%82%A7%E3%83%96%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E7%B4%B9%E4%BB%8B.gif "レスポンシブWebデザイン")からご覧下さい。
 
 ## :green_book: 使い方
