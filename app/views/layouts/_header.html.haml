@@ -20,7 +20,7 @@
           %li.header-bar-item
             = link_to "新規投稿", new_post_path, method: :get
           %li.header-bar-item
-            = link_to "ログアウト", destroy_user_session_path, method: :delete
+            = link_to "ログアウト", destroy_user_session_path, method: :delete ,data: {confirm: "ログアウトします。よろしいですか？"}
         - else
           %li.header-bar-item
             = link_to "ログイン", new_user_session_path, method: :get
