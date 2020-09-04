@@ -14,7 +14,7 @@
           - if user_signed_in? && post.user_id == current_user.id
             = link_to edit_post_path(post.id), method: :get, class:"edit-actions-btn" do
               編集
-            = link_to post_path(post.id), method: :delete, class:"edit-actions-btn" do
+            = link_to post_path(post.id), method: :delete, class:"edit-actions-btn" ,data: {confirm: "投稿を削除します。よろしいですか？"} do
               削除
   %ul.debug-tool
     %h4.debug-tool-text
