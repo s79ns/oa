@@ -29,6 +29,7 @@
           未ログイン状態でご確認下さい
     %li.debug-tool-item
       = link_to "新規投稿", new_post_path, method: :get, :onclick => "clickEvent()"
+        - unless user_signed_in?
     %hr
     %h4.debug-tool-text
       %i.fas.fa-user.fa-2x
