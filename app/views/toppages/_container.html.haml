@@ -28,7 +28,12 @@
         .tooltiptext
           未ログイン状態でご確認下さい
     %li.debug-tool-item
-      = link_to "新規投稿", new_post_path, method: :get
+      = link_to "新規投稿", new_post_path, method: :get, :onclick => "clickEvent()"
+        - unless user_signed_in?
+        :javascript
+          function clickEvent (){
+          alert('ログイン状態ではない為、リダイレクトします。');
+          }
     %hr
     %h4.debug-tool-text
       %i.fas.fa-user.fa-2x
