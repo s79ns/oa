@@ -8,6 +8,9 @@
       .message__name
         = "#{post.name}："
         %time(datetime="#{post.created_at}")= time_ago_in_words(post.created_at)
+        %div{:id => "likes_buttons_#{post.id}"}
+          = render partial: 'likes/like', locals: { post: post, likes: @likes}
+
       .message__text
         = post.text
         .edit-actions

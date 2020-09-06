@@ -5,8 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :posts
   has_many :likes
-  validates :nickname, presence: true
-  validates :nickname, uniqueness: true
+  # validates :nickname, presence: true
+  # # validates :nickname, uniqueness: true
 
   def self.guest
     find_or_create_by!(email: 'guest@example.com') do |user|
