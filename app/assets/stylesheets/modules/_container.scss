@@ -37,14 +37,13 @@
   &__text {
     position: relative;
     display: inline-block;
-    margin: 1.5em 0;
-    margin-left: 20px;
-    padding: 7px 10px;
+    margin: 20px 0 10px 15px;
+    padding: 8px 12px;
     min-width: 120px;
     max-width: 100%;
     font-size: 16px;
     background: #87cefa;
-    border-radius: 12px;
+    border-radius: 15px;
     :before {
       content: "";
       display: inline-block;
@@ -68,6 +67,16 @@
     color: white;
     font-size: 14px;
     margin-left: 5px;
+  }
+  .like-alia {
+    padding: 10px;
+    &__link {
+      display: flex;
+      font-size: 13px;
+    }
+    a {
+      color: #ffbeda;
+    }
   }
 }
 ul.debug-tool {

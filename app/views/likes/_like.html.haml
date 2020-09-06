@@ -3,9 +3,11 @@
     = link_to post_like_path(post_id: post.id ,id: post.likes[0].id), method: :delete, remote: true do
       %i.fas.fa-heart
         = post.likes_count
-        いいね！
+    .like-text
+      いいね！
   - else
     = link_to post_likes_path(post.id), method: :post, remote: true do
       %i.fas.fa-heart
         = post.likes_count
-        いいね！
+    .like-text
+      いいね！
