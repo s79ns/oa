@@ -2,12 +2,14 @@
   - unless post.like_user(current_user.id).blank?
     = link_to post_like_path(post_id: post.id ,id: post.likes[0].id), method: :delete, remote: true do
       .vertical_like
-        %i.material-icons.red-text favorite
-        %span.red-text
+        %i.fas.fa-heart
           = post.likes_count
+          .like-text
+            いいね！
   - else
     = link_to post_likes_path(post.id), method: :post, remote: true do
       .vertical_like
-        %i.material-icons.grey-text.text-darken-2 favorite_border
-        %span.grey-text.text-darken-2
+        %i.fas.fa-heart
           = post.likes_count
+          .like-text
+            いいね！

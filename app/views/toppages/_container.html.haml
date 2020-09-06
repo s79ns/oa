@@ -8,8 +8,6 @@
       .message__name
         = "#{post.name}："
         %time(datetime="#{post.created_at}")= time_ago_in_words(post.created_at)
-        %div{:id => "likes_buttons_#{post.id}"}
-          = render partial: 'likes/like', locals: { post: post, likes: @likes}
       .message__text
         = post.text
         .edit-actions
@@ -18,6 +16,8 @@
               編集
             = link_to post_path(post.id), method: :delete, class:"edit-actions-btn" ,data: {confirm: "投稿を削除します。よろしいですか？"} do
               削除
+      .like-alia{:id => "likes_buttons_#{post.id}"}
+        = render partial: 'likes/like', locals: { post: post, likes: @likes}
   %ul.debug-tool
     %h4.debug-tool-text
       %i.fas.fa-wrench.fa-2x
