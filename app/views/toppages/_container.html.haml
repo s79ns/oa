@@ -12,10 +12,8 @@
         = post.text
         .edit-actions
           - if user_signed_in? && post.user_id == current_user.id
-            = link_to edit_post_path(post.id), method: :get, class:"edit-actions-btn" do
-              編集
-            = link_to post_path(post.id), method: :delete, class:"edit-actions-btn" ,data: {confirm: "投稿を削除します。よろしいですか？"} do
-              削除
+            = link_to "編集", edit_post_path(post.id), method: :get, class:"edit-actions-btn"
+            = link_to "削除", post_path(post.id), method: :delete, class:"edit-actions-btn", data: {confirm: "投稿を削除します。よろしいですか？"}
       .like-alia
         .like-alia__link{:id => "likes_buttons_#{post.id}"}
           = render partial: 'likes/like', locals: { post: post, likes: @likes}
@@ -45,5 +43,8 @@
         .tooltiptext
           ゲストユーザー以外削除します
     %li.debug-tool-item
-      = link_to "アカウント削除", user_registration_path, method: :delete
+      - if user_signed_in? && current_user.email == "guest@example.com"
+        = link_to "アカウント削除", user_registration_path, method: :delete
+      - else
+        = link_to "アカウント削除", user_registration_path, method: :delete, data: {confirm: "アカウントを削除します。よろしいですか？"}
     %hr
