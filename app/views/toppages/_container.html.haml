@@ -46,5 +46,5 @@
       - if user_signed_in? && current_user.email == "guest@example.com"
         = link_to "アカウント削除", user_registration_path, method: :delete
       - else
-        = link_to "アカウント削除", user_registration_path, method: :delete, data: {confirm: "アカウントを削除します。よろしいですか？"}
+        = link_to "アカウント削除", user_registration_path, method: :delete, data: {confirm: "アカウントを削除すると、投稿及びいいね！も消去されます。"}
     %hr
