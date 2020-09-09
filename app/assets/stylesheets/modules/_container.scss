@@ -79,13 +79,25 @@
     }
   }
   .pagination {
+    display: flex;
     padding: 10px;
-    color: #666;
+    color: rgba(0, 0, 0, 0.87);
     font-size: 15px;
     font-style: normal;
     font-weight: 300;
     span {
       margin-right: 5px;
+      border: 1px solid #666;
+    }
+    .current {
+      padding: 7px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #4285f4;
+      padding: 7px;
+      display: block;
     }
   }
 }
