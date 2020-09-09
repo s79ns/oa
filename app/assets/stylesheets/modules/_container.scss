@@ -78,6 +78,16 @@
       color: #ffbeda;
     }
   }
+  .pagination {
+    padding: 10px;
+    color: #666;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    span {
+      margin-right: 5px;
+    }
+  }
 }
 ul.debug-tool {
   width: 20%;
