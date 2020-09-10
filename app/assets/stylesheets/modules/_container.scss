@@ -1,6 +1,6 @@
 .main-container {
   display: flex;
-  padding-top: 150px;
+  padding: 150px 0;
 }
 
 .message {
@@ -86,7 +86,7 @@
     font-style: normal;
     font-weight: 300;
     span {
-      margin-right: 5px;
+      margin-right: 8px;
       border: 1px solid #57c3e9;
     }
     .current {
@@ -94,7 +94,7 @@
     }
     a {
       text-decoration: none;
-      color: #4285f4;
+      color: #57c3e9;
       padding: 7px 11px;
       display: block;
     }

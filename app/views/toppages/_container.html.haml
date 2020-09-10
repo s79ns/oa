@@ -17,6 +17,7 @@
       .like-alia
         .like-alia__link{:id => "likes_buttons_#{post.id}"}
           = render partial: 'likes/like', locals: { post: post, likes: @likes}
+    %hr
     = paginate @posts
   %ul.debug-tool
     %h4.debug-tool-text
