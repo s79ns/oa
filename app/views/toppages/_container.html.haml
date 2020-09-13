@@ -19,37 +19,48 @@
           = render partial: 'likes/like', locals: { post: post, likes: @likes}
     %hr
     = paginate @posts
-  %ul.debug-tool
-    %h4.debug-tool-text
-      %i.fas.fa-wrench.fa-2x
-      アプリ検証ツール一覧
-    %hr
-    %h4.debug-tool-text
-      %i.fas.fa-sync-alt.fa-2x
-      リダイレクト
-      %i.fas.fa-exclamation-circle
-        .tooltiptext
-          未ログイン状態でご確認下さい
-    %li.debug-tool-item
-      = link_to "新規投稿", new_post_path, method: :get, :onclick => "clickEvent()"
-        - unless user_signed_in?
-        :javascript
-          function clickEvent (){
-          alert('ログイン状態ではない為、リダイレクトします。');
-          }
-    %hr
-    %h4.debug-tool-text
-      %i.fas.fa-user.fa-2x
-      アカウント削除
-      %i.fas.fa-exclamation-circle
-        .tooltiptext
-          ゲストユーザー以外削除します
-    %li.debug-tool-item
-      - if user_signed_in? && current_user.email == "guest@example.com"
-        = link_to "アカウント削除", user_registration_path, method: :delete
-      - else
-        = link_to "アカウント削除", user_registration_path, method: :delete, data: {confirm: "アカウントを削除すると、投稿及びいいね！も消去されます。"}
-    %hr
+  .message-tools
+    %ul.debug-tool
+      %h4.debug-tool-text
+        %i.fas.fa-wrench.fa-2x
+        アプリ検証ツール一覧
+      %hr
+      %h4.debug-tool-text
+        %i.fas.fa-sync-alt.fa-2x
+        リダイレクト
+        %i.fas.fa-exclamation-circle
+          .tooltiptext
+            未ログイン状態でご確認下さい
+      %li.debug-tool-item
+        = link_to "新規投稿", new_post_path, method: :get, :onclick => "clickEvent()"
+          - unless user_signed_in?
+          :javascript
+            function clickEvent (){
+            alert('ログイン状態ではない為、リダイレクトします。');
+            }
+      %hr
+      %h4.debug-tool-text
+        %i.fas.fa-user.fa-2x
+        アカウント削除
+        %i.fas.fa-exclamation-circle
+          .tooltiptext
+            ゲストユーザー以外削除します
+      %li.debug-tool-item
+        - if user_signed_in? && current_user.email == "guest@example.com"
+          = link_to "アカウント削除", user_registration_path, method: :delete
+        - else
+          = link_to "アカウント削除", user_registration_path, method: :delete, data: {confirm: "アカウントを削除すると、投稿及びいいね！も消去されます。"}
+      %hr
+    .performance
+      %h4.debug-tool-text
+        %i.fas.fa-trophy.fa-2x
+        作業実績
+        %i.fas.fa-exclamation-circle
+          .tooltiptext
+            これまで作業を行った記録です
+      %hr
+      %li.debug-tool-item
+        = link_to "作業実績へ", "#"
 %p.pagetop{:style => "display: block;"}
   %a{:href => "#"}
     %i.fas.fa-chevron-up

@@ -22,6 +22,7 @@
   }
   hr {
     margin-bottom: 30px;
+    width: 100%;
   }
   &__name {
     font-size: 17px;
@@ -100,44 +101,59 @@
     }
   }
 }
-ul.debug-tool {
+.message-tools {
+  margin-right: 100px;
   width: 20%;
+}
+
+ul.debug-tool {
   height: 520px;
   background-color: #f0f8ff;
   box-shadow: 0 0 3px grey;
   border-radius: 10px;
-  margin-right: 100px;
   text-align: center;
-  h4.debug-tool-text {
-    padding: 30px 0 10px 0;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    color: #272727;
+}
+h4.debug-tool-text {
+  padding: 30px 0 10px 0;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #272727;
+}
+hr {
+  width: 80%;
+  margin-top: 20px;
+}
+li.debug-tool-item {
+  font-size: 14px;
+  border: 2px solid #57c3e9;
+  font-weight: bold;
+  border-radius: 3px;
+  display: inline-block;
+  margin: 15px 0 10px 0;
+  p {
+    color: #57c3e9;
+    padding: 8px 20px;
   }
-  hr {
-    width: 80%;
-    margin-top: 20px;
-  }
-  li.debug-tool-item {
-    font-size: 14px;
-    border: 2px solid #57c3e9;
-    font-weight: bold;
-    border-radius: 3px;
-    display: inline-block;
-    margin: 15px 0 10px 0;
-    p {
-      color: #57c3e9;
-      padding: 8px 20px;
-    }
-    a {
-      text-decoration: none;
-      color: #57c3e9;
-      display: block;
-      padding: 8px 20px;
-      white-space: nowrap;
-    }
+  a {
+    text-decoration: none;
+    color: #57c3e9;
+    display: block;
+    padding: 8px 20px;
+    white-space: nowrap;
   }
 }
+.performance {
+  background-color: #f0f8ff;
+  height: 200px;
+  margin-top: 50px;
+  box-shadow: 0 0 3px grey;
+  border-radius: 10px;
+  text-align: center;
+  hr {
+    margin-bottom: 20px;
+  }
+}
+
 i.fa-exclamation-circle {
   color: #1e90ff;
   position: relative;
