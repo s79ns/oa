@@ -37,11 +37,10 @@
   }
   .main-container {
     flex-direction: column;
-    // margin-top: 50px;
     .message {
       margin-bottom: 30px;
     }
-    ul.debug-tool {
+    .message-tools {
       margin: 0 auto;
       width: 80%;
     }
