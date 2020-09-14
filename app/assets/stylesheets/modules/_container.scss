@@ -19,6 +19,9 @@
     font-weight: 600;
     letter-spacing: 0.5px;
     margin-bottom: 30px;
+    i.fas.fa-comment-dots {
+      color: #00bfff;
+    }
   }
   hr {
     margin-bottom: 30px;
@@ -120,6 +123,15 @@ h4.debug-tool-text {
   font-weight: 600;
   letter-spacing: 0.5px;
   color: #272727;
+  i.fas.fa-wrench {
+    color: #999999;
+  }
+  i.fas.fa-sync-alt {
+    color: #33cc66;
+  }
+  i.fas.fa-user {
+    color: #ff3333;
+  }
 }
 hr {
   width: 80%;
@@ -154,6 +166,9 @@ li.debug-tool-item {
   text-align: center;
   hr {
     margin-bottom: 20px;
+  }
+  i.fas.fa-trophy {
+    color: #ff9933;
   }
 }
 
