@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'performance/index'
   get 'likes/create'
   get 'likes/destroy'
   devise_for :users, controllers: {
