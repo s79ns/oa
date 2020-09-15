@@ -2,4 +2,7 @@
   .performance-header__title
     performance
   .performance-header__botton
-    ここにボタンをおく
+    %a#panel-btn{:href => "#"}
+      %span#panel-btn-icon
+    #panel
+      = link_to "掲示板に戻る", root_path, method: :get
