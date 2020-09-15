@@ -1,0 +1,18 @@
+.performance-container {
+  background-color: green;
+  padding: 50px;
+  &__title {
+    height: 200px;
+    background-color: black;
+    color: gold;
+    text-align: center;
+  }
+  .badge-icon {
+    height: 100px;
+    background-color: pink;
+  }
+  .badge-text {
+    color: gold;
+    background-color: gray;
+  }
+}
