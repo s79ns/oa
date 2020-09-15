@@ -10,6 +10,73 @@
     letter-spacing: 10px;
   }
   &__botton {
-    margin-left: 500px;
+    margin-left: 400px;
+  }
+}
+// ハンバーガーメニュー
+#panel-btn {
+  display: inline-block;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin-top: 10px;
+  border-radius: 50%;
+  background: #fff;
+}
+#panel-btn:hover {
+  background: #d3d3d3;
+}
+#panel-btn-icon {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 14px;
+  height: 2px;
+  margin: -1px 0 0 -7px;
+  background: #696969;
+  transition: 0.2s;
+}
+#panel-btn-icon:before,
+#panel-btn-icon:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 14px;
+  height: 2px;
+  background: #696969;
+  transition: 0.3s;
+}
+#panel-btn-icon:before {
+  margin-top: -6px;
+}
+#panel-btn-icon:after {
+  margin-top: 4px;
+}
+#panel-btn .close {
+  background: transparent;
+}
+#panel-btn .close:before,
+#panel-btn .close:after {
+  margin-top: 0;
+}
+#panel-btn .close:before {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+#panel-btn .close:after {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+#panel {
+  display: none;
+  margin-left: -35px;
+  padding: 10px;
+  background-color: #dcdcdc;
+  a {
+    text-decoration: none;
+    color: #666;
   }
 }
