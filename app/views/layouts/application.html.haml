@@ -9,8 +9,5 @@
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
   %body
     = render 'layouts/notifications'
-    -# %script{:src => "https://cdn.jsdelivr.net/npm/bubbly-bg@1.0.0/dist/bubbly-bg.js"}
-    -# :javascript
-    -#   bubbly();
     = yield
     = javascript_include_tag 'application'
