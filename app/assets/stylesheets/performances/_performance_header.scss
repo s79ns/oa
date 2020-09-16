@@ -75,6 +75,8 @@
   margin-left: -35px;
   padding: 10px;
   background-color: #dcdcdc;
+  position: relative;
+  z-index: 105;
   a {
     text-decoration: none;
     color: #666;
