@@ -1,5 +1,5 @@
 $(function () {
-  var $setElm = $(".performance-viewer"),
+  var $setElm = $(".performance-viewer"), // ID及びクラスで指定可能です
     fadeSpeed = 1500,
     switchDelay = 10000;
 

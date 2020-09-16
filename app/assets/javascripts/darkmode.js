@@ -1,6 +1,5 @@
 // チェックボックスの取得
 const btn = document.querySelector("#toggle");
-
 // チェックした時の挙動
 btn.addEventListener("change", () => {
   if (btn.checked == true) {

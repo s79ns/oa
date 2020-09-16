@@ -3,7 +3,7 @@ $(function () {
   var topBtn = $(".pagetop");
   topBtn.css("bottom", "-100px");
   var showFlag = false;
-  //スクロールが100に達したらボタン表示
+  // スクロールが100に達したらボタン表示
   $(window).scroll(function () {
     if ($(this).scrollTop() > 100) {
       if (showFlag == false) {
@@ -17,7 +17,7 @@ $(function () {
       }
     }
   });
-  //スクロールしてトップ
+  // スクロールしてトップ
   topBtn.click(function () {
     $("body,html").animate(
       {
