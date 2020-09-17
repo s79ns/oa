@@ -1,7 +1,7 @@
 .performance-container {
   background-color: #222222;
   padding: 50px;
-  height: 500px;
+  height: 650px;
   &__title {
     height: 100px;
     font-size: 20px;
@@ -10,23 +10,63 @@
     font-family: monospace;
     letter-spacing: 10px;
     text-align: center;
+    margin: 30px;
+    span {
+      display: inline-block;
+      margin: 10px 0;
+    }
   }
   .badge-icon {
     height: 100px;
-    font-size: 70px;
-    padding: 0 20px;
+    font-size: 60px;
     color: #666;
-    &__image {
+    text-align: center;
+    margin-top: 75px;
+    i {
+      padding: 0 10px;
+    }
+    .fas.fa-user-lock {
+      color: #ff6928;
+    }
+    .fas.fa-toggle-on {
+      color: #008800;
+    }
+    .fas.fa-moon {
+      color: #ffff88;
+    }
+    .fas.fa-heart {
+      color: #ffbeda;
+    }
+    .fas.fa-bolt {
+      color: #ffd700;
+    }
+    .fas.fa-bars {
+      color: #a0522d;
+    }
+    .fas.fa-mobile-alt {
+      color: #a9a9a9;
+    }
+    .fas.fa-arrow-circle-up {
+      color: #a16eff;
+    }
+    .far.fa-images {
+      color: #d6ff58;
+    }
+    .fas.fa-caret-square-down {
+      color: #64f9c1;
+    }
+    .far.fa-window-maximize {
+      color: #60eeff;
     }
   }
   .badge-text {
     color: gold;
     font-size: 10px;
-    padding: 10px 5px;
-    margin-left: 12px;
-    display: flex;
+    font-family: monospace;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 35px 0;
     &__index {
-      margin-right: auto;
     }
   }
 }
