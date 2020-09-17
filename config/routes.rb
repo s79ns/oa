@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root "performance#index"
+  get 'toppages/index'
   get 'performance/index'
   get 'likes/create'
   get 'likes/destroy'
@@ -6,8 +8,6 @@ Rails.application.routes.draw do
     registrations: 'registrations',
     passwords: 'passwords'
   }
-  get 'toppages/index'
-  root "toppages#index"
   resources :posts do
     resources :posts, only: [:index, :new, :create, :destroy, :edit, :update]
     resources :likes, only: [:create, :destroy]
