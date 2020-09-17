@@ -4,8 +4,23 @@ class ApplicationController < ActionController::Base
   def check_guest
     email = resource&.email || params[:user][:email].downcase
     if email == 'guest@example.com'
-      redirect_to root_path, alert: 'ゲストユーザーの変更・削除はできません'
+      redirect_to toppages_index_path, alert: 'ゲストユーザーの変更・削除はできません'
     end
+  end
+
+  # deviseログイン後のパスを変更
+  def after_sign_in_path_for(resource)
+    toppages_index_path
+  end
+
+  # deviseアカウント編集後のパスを変更
+  def after_update_path_for(resource)
+    toppages_index_path
+  end
+
+  # deviseログアウト後のパスを変更
+  def after_sign_out_path_for(resource)
+    toppages_index_path
   end
 
   private

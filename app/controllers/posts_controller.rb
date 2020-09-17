@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
 
   def index
-    redirect_to root_path
+    redirect_to toppages_index_path
   end
 
   def new
@@ -15,7 +15,7 @@ class PostsController < ApplicationController
     if @post.save
     else
       @post = Post.includes(:user)
-      redirect_to root_path, alert: '新規投稿に失敗しました'
+      redirect_to toppages_index_path, alert: '新規投稿に失敗しました'
     end
   end
 
