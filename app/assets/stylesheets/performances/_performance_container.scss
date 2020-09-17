@@ -1,7 +1,7 @@
 .performance-container {
   background-color: #222222;
   padding: 50px;
-  height: 500px;
+  height: 600px;
   &__title {
     height: 100px;
     font-size: 20px;
@@ -10,23 +10,26 @@
     font-family: monospace;
     letter-spacing: 10px;
     text-align: center;
+    margin: 30px;
   }
   .badge-icon {
     height: 100px;
-    font-size: 70px;
-    padding: 0 20px;
+    font-size: 60px;
     color: #666;
-    &__image {
+    text-align: center;
+    margin: 50px 30px 30px 30px;
+    i {
+      padding: 0 10px;
     }
   }
   .badge-text {
     color: gold;
     font-size: 10px;
-    padding: 10px 5px;
-    margin-left: 12px;
-    display: flex;
+    font-family: monospace;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 30px 0;
     &__index {
-      margin-right: auto;
     }
   }
 }
