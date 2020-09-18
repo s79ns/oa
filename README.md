@@ -43,41 +43,42 @@ s79ns
 
 # :clipboard: OA DB 設計
 
+## ER 図
+
 <img src="https://github.com/s79ns/oa/blob/DB%C3%97ER%C3%97cacoo/app/assets/images/OA%20ER%E5%9B%B3.png">
 
 ## users テーブル
 
 | Column   | Type   | Options     |
 | -------- | ------ | ----------- |
-| name     | string | null: false |
+| nickname | string | null: false |
 | email    | string | null: false |
 | password | string | null: false |
 
 ### Association
 
 - has_many :posts
-- has_many :comments
 
 ## posts テーブル
 
-| Column  | Type    | Options                        |
-| ------- | ------- | ------------------------------ |
-| text    | text    |                                |
-| image   | text    |                                |
-| user_id | integer | null: false, foreign_key: true |
+| Column     | Type       | Options                        |
+| ---------- | ---------- | ------------------------------ |
+| name       | string     |                                |
+| text       | text       |                                |
+| like_count | integer    |                                |
+| user_id    | references | null: false, foreign_key: true |
 
 ### Association
 
 - belongs_to :user
 - has_many :comments
 
-## comments テーブル
+## likes テーブル
 
-| Column  | Type    | Options                        |
-| ------- | ------- | ------------------------------ |
-| text    | text    | null: false                    |
-| user_id | integer | null: false, foreign_key       |
-| post_id | integer | null: false, foreign_key: true |
+| Column  | Type       | Options                        |
+| ------- | ---------- | ------------------------------ |
+| user_id | references | null: false, foreign_key: true |
+| post_id | references | null: false, foreign_key: true |
 
 ### Association
 
