@@ -43,6 +43,8 @@ s79ns
 
 # :clipboard: OA DB 設計
 
+<img src="https://github.com/s79ns/oa/blob/DB%C3%97ER%C3%97cacoo/app/assets/images/OA%20ER%E5%9B%B3.png"
+
 ## users テーブル
 
 | Column   | Type   | Options     |
