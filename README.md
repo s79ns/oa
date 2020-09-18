@@ -43,9 +43,11 @@ s79ns
 
 # :clipboard: OA DB 設計
 
-## ER 図
+## :chart_with_upwards_trend: ER 図
 
 <img src="https://github.com/s79ns/oa/blob/DB%C3%97ER%C3%97cacoo/app/assets/images/OA%20ER%E5%9B%B3.png">
+
+## :pencil2: DB 設計
 
 ## users テーブル
 
@@ -57,7 +59,8 @@ s79ns
 
 ### Association
 
-- has_many :posts
+- has_many :posts, dependent: :destroy
+- has_many :likes, dependent: :destroy
 
 ## posts テーブル
 
@@ -71,7 +74,7 @@ s79ns
 ### Association
 
 - belongs_to :user
-- has_many :comments
+- has_many :likes, dependent: :destroy
 
 ## likes テーブル
 
@@ -83,4 +86,4 @@ s79ns
 ### Association
 
 - belongs_to :user
-- belongs_to :comment
+- belongs_to :post
