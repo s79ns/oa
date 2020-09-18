@@ -23,7 +23,7 @@ performance × easy chat
 
 # easy chat<br>
 
-チャットアプリケーションです。ユーザー新規登録・投稿・編集・削除・いいね！機能や<br>
+チャット機能です。ユーザー新規登録・投稿・編集・削除・いいね！機能や<br>
 リダイレクト・ページネーションなど実装しています。<br>
 <br>👉 その他機能<br>
 ・[ゲストログイン](https://github.com/s79ns/oa/blob/master/app/assets/images/%E3%82%B2%E3%82%B9%E3%83%88%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3%E7%B4%B9%E4%BB%8B.gif "ゲストログイン")：新規登録をせずログインができます。（登録情報の編集・削除は不可）<br>
@@ -52,7 +52,7 @@ s79ns
 
 ## :paperclip: ER 図
 
-<img src="https://github.com/s79ns/oa/blob/master/app/assets/images/OA%20ER%E5%9B%B3.png">
+<img src="https://github.com/s79ns/oa/blob/master/app/assets/images/ER%E5%9B%B3.png">
 
 ## :pencil2: DB 設計
 
