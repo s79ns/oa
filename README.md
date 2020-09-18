@@ -56,7 +56,7 @@ s79ns
 
 ## :paperclip: ER 図
 
-<img src="https://github.com/s79ns/oa/blob/DB%C3%97ER%C3%97cacoo/app/assets/images/OA%20ER%E5%9B%B3.png">
+<img src="https://github.com/s79ns/oa/blob/master/app/assets/images/OA%20ER%E5%9B%B3.png">
 
 ## :pencil2: DB 設計
 
