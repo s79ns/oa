@@ -12,7 +12,7 @@ performance × easy chat
 
 ## :eyes: 機能紹介
 
-ご覧いただきありがとうございます。大きく分けて機能が二つあります。
+ご覧いただきありがとうございます。大きく分けて機能が 2 つあります。
 
 # performance<br>
 
@@ -47,10 +47,6 @@ performance × easy chat
 ## :wink: 作者
 
 s79ns
-
-## :relaxed: 作者より
-
-ご覧いただきありがとうございます。<br>他にも作成したアプリがございますので、宜しければご覧下さい。
 
 # :clipboard: easy chat DB 設計
 
