@@ -8,9 +8,20 @@
 
 ## :speech_balloon: アプリケーション名
 
-easy chat
+performance × easy chat
 
 ## :eyes: 機能紹介
+
+ご覧いただきありがとうございます。大きく分けて機能が二つあります。
+
+# performance<br>
+
+学習したものを表示する機能です。<br>
+上部：easy chat（掲示板）へのリンクがあります。<br>
+中央：スライドを 5 枚、一定のタイミングで表示させています。<br>
+下部：学習したものをアイコン化しました。テキストをクリックすると詳細が表示されます。<br>
+
+# easy chat<br>
 
 チャットアプリケーションです。ユーザー新規登録・投稿・編集・削除・いいね！機能や<br>
 リダイレクト・ページネーションなど実装しています。<br>
@@ -41,43 +52,49 @@ s79ns
 
 ご覧いただきありがとうございます。<br>他にも作成したアプリがございますので、宜しければご覧下さい。
 
-# :clipboard: OA DB 設計
+# :clipboard: easy chat DB 設計
+
+## :paperclip: ER 図
+
+<img src="https://github.com/s79ns/oa/blob/DB%C3%97ER%C3%97cacoo/app/assets/images/OA%20ER%E5%9B%B3.png">
+
+## :pencil2: DB 設計
 
 ## users テーブル
 
 | Column   | Type   | Options     |
 | -------- | ------ | ----------- |
-| name     | string | null: false |
+| nickname | string | null: false |
 | email    | string | null: false |
 | password | string | null: false |
 
 ### Association
 
-- has_many :posts
-- has_many :comments
+- has_many :posts, dependent: :destroy
+- has_many :likes, dependent: :destroy
 
 ## posts テーブル
 
-| Column  | Type    | Options                        |
-| ------- | ------- | ------------------------------ |
-| text    | text    |                                |
-| image   | text    |                                |
-| user_id | integer | null: false, foreign_key: true |
+| Column     | Type       | Options                        |
+| ---------- | ---------- | ------------------------------ |
+| name       | string     |                                |
+| text       | text       |                                |
+| like_count | integer    |                                |
+| user_id    | references | null: false, foreign_key: true |
 
 ### Association
 
 - belongs_to :user
-- has_many :comments
+- has_many :likes, dependent: :destroy
 
-## comments テーブル
+## likes テーブル
 
-| Column  | Type    | Options                        |
-| ------- | ------- | ------------------------------ |
-| text    | text    | null: false                    |
-| user_id | integer | null: false, foreign_key       |
-| post_id | integer | null: false, foreign_key: true |
+| Column  | Type       | Options                        |
+| ------- | ---------- | ------------------------------ |
+| user_id | references | null: false, foreign_key: true |
+| post_id | references | null: false, foreign_key: true |
 
 ### Association
 
 - belongs_to :user
-- belongs_to :comment
+- belongs_to :post
