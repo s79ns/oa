@@ -8,15 +8,15 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  # deviseログイン後のパスを変更
+  # deviseアカウント登録後・ログイン後のパスを変更
   def after_sign_in_path_for(resource)
     toppages_index_path
   end
 
   # deviseアカウント編集後のパスを変更
-  def after_update_path_for(resource)
-    toppages_index_path
-  end
+  # def after_update_path(resource)
+  #   toppages_index_path
+  # end
 
   # deviseログアウト後のパスを変更
   def after_sign_out_path_for(resource)
