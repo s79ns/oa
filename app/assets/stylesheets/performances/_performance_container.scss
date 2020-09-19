@@ -22,8 +22,12 @@
     color: #666;
     text-align: center;
     margin-top: 75px;
+    display: flex;
+    justify-content: center;
+    &__block {
+      margin-right: 40px;
+    }
     i {
-      padding: 0 10px;
     }
     .fas.fa-user-lock {
       color: #ff6928;
