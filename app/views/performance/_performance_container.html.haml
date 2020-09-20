@@ -10,7 +10,17 @@
       %i.fas.fa-user-lock
       .badge-text
         .badge-text__index
-          GUEST USER
+          %a#openModal GUEST USER
+    / モーダルウィンドウ開始
+    %section#modalArea.modalArea
+      #modalBg.modalBg
+      .modalWrapper
+        .modalContents
+          Here are modal contents!
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        #closeModal.closeModal
+          ×
+    / モーダルウィンドウ終了
     .badge-icon__block
       %i.fas.fa-toggle-on
       .badge-text
