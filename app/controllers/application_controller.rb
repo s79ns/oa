@@ -14,9 +14,9 @@ class ApplicationController < ActionController::Base
   end
 
   # deviseアカウント編集後のパスを変更
-  # def after_update_path(resource)
-  #   toppages_index_path
-  # end
+  def after_update_path(resource)
+    toppages_index_path
+  end
 
   # deviseログアウト後のパスを変更
   def after_sign_out_path_for(resource)
