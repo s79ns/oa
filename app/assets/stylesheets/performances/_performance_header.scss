@@ -13,6 +13,7 @@
     margin-left: 400px;
   }
 }
+
 // ハンバーガーメニュー
 #panel-btn {
   display: inline-block;
@@ -80,5 +81,22 @@
   a {
     text-decoration: none;
     color: #666;
+    // 左からアンダーラインが伸びる
+    position: relative;
+    display: inline-block;
+    transition: 0.3s;
+  }
+  a::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    width: 0;
+    height: 1px;
+    background-color: #666666;
+    transition: 0.3s;
+  }
+  a:hover::after {
+    width: 100%;
   }
 }
