@@ -157,10 +157,18 @@
 
 .closeModal {
   position: absolute;
-  top: 0.5rem;
-  right: 2rem;
-  font-size: 35px;
+  top: 1.2rem;
+  right: 1.2rem;
+  padding: 5px 8px 8px 8px;
+  font-size: 25px;
   cursor: pointer;
+  background-color: #999999;
+  color: #fff;
+  border-radius: 5px;
+  line-height: 20px;
+}
+.closeModal:hover {
+  opacity: 0.8;
 }
 #openModal {
   top: 50%;

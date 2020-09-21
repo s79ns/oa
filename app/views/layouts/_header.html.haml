@@ -14,8 +14,8 @@
           .darkmode-text
             ダークモード
         %li.toggle-switch
-          %input#toggle.toggle-input{:type => "checkbox"}/
-          %label.toggle-label{:for => "toggle"}
+          %input#toggle.toggle-input{type: "checkbox"}/
+          %label.toggle-label{for: "toggle"}
         - if user_signed_in?
           %li.header-bar-item
             = link_to "新規投稿", new_post_path, method: :get
