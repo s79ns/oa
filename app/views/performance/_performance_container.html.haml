@@ -16,8 +16,15 @@
       #modalBg.modalBg
       .modalWrapper
         .modalContents
-          Here are modal contents!
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          .modalContents__title
+            you are choice a icon
+          .modalContents__icon
+            %i.fas.fa-user-lock
+          .modalContents__icon-title
+            GUEST USER
+          .modalContents__output
+            Please click here for
+            = link_to "output.", "/"
         #closeModal.closeModal
           ×
     / モーダルウィンドウ終了
