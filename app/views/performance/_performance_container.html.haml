@@ -10,7 +10,24 @@
       %i.fas.fa-user-lock
       .badge-text
         .badge-text__index
-          GUEST USER
+          %a#openModal GUEST USER
+    / モーダルウィンドウ開始
+    %section#modalArea.modalArea
+      #modalBg.modalBg
+      .modalWrapper
+        .modalContents
+          .modalContents__title
+            you are choice a icon
+          .modalContents__icon
+            %i.fas.fa-user-lock
+          .modalContents__icon-title
+            GUEST USER
+          .modalContents__output
+            Please click here for
+            = link_to "output.", "/"
+        #closeModal.closeModal
+          ×
+    / モーダルウィンドウ終了
     .badge-icon__block
       %i.fas.fa-toggle-on
       .badge-text
