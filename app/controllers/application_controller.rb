@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
   end
 
   # deviseアカウント編集後のパスを変更
-  def after_update_path(resource)
+  def after_update_path_for(resource)
     toppages_index_path
   end
 
