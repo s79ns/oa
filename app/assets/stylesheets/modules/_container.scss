@@ -76,10 +76,12 @@
     padding: 10px;
     &__link {
       display: flex;
-      font-size: 13px;
     }
     a {
       color: #ffbeda;
+    }
+    i {
+      font-size: 15px;
     }
   }
   // ページネーション
