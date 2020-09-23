@@ -176,7 +176,7 @@ li.debug-tool-item {
   }
 }
 
-// マウスホバーアクション
+// ホバーテキスト 開始
 i.fa-exclamation-circle {
   color: #1e90ff;
   position: relative;
@@ -212,6 +212,7 @@ i.fa-exclamation-circle:hover .tooltiptext {
   border-radius: 6px;
   background-color: #1e90ff;
 }
+// ホバーテキスト 終了
 
 // ダークモード
 .light-theme {
