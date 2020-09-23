@@ -84,7 +84,8 @@
       font-size: 15px;
     }
   }
-  // ページネーション
+
+  // ページネーション 開始
   .pagination {
     display: flex;
     padding: 10px;
@@ -106,6 +107,7 @@
       display: block;
     }
   }
+  // ページネーション 終了
 }
 
 .message-tools {
