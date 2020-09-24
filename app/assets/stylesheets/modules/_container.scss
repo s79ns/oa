@@ -32,12 +32,12 @@
     font-style: normal;
     font-weight: 300;
     color: #666;
-
     time {
       color: #57c3e9;
       font-size: 14px;
     }
   }
+  // 吹き出し 開始
   &__text {
     position: relative;
     display: inline-block;
@@ -60,6 +60,8 @@
       transform: rotate(35deg);
     }
   }
+  // 吹き出し 終了
+
   .edit-actions {
     display: inline-block;
     margin-left: 5px;
