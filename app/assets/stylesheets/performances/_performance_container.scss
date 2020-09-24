@@ -74,6 +74,7 @@
     letter-spacing: 2px;
     padding: 35px 0;
     &__index {
+      // アンダーラインを隠しておいて表示させる
       a {
         position: relative;
         display: inline-block;
