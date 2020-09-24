@@ -1,6 +1,6 @@
 $(function () {
   var showFlag = false;
-  var topBtn = $(".pagetop");
+  var topBtn = $(".page-top");
   topBtn.css("bottom", "-100px");
   var showFlag = false;
   // スクロールが100に達したらボタン表示

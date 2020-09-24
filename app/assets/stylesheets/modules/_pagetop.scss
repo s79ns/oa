@@ -1,11 +1,11 @@
 // ページトップボタン
-.pagetop {
+.page-top {
   display: none;
   position: fixed;
   right: 50px;
   bottom: 60px;
 }
-.pagetop a {
+.page-top a {
   display: block;
   font-size: 0;
   width: 50px;
@@ -15,7 +15,7 @@
   border-radius: 50%;
   line-height: 50px;
 }
-.pagetop a i {
+.page-top a i {
   font-size: 20px;
   color: #fff;
   line-height: 50px;
