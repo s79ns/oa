@@ -8,9 +8,9 @@
   width: 30%;
   padding: 50px;
   border-radius: 5px;
-  z-index: 1000; // modalを優先し、maskとの重なり順を調整する
-  opacity: 0; // 透明にし、モーダルウィンドウを開く時にアニメーションをつける
-  visibility: hidden; // 非表示にし、モーダルウィンドウ内のコンテンツにアクセスしないようにする
+  z-index: 1000; // modal > mask
+  opacity: 0; // モーダルウィンドウを開く時にアニメーションをつける
+  visibility: hidden; // モーダルウィンドウ内のコンテンツにアクセスしないようにする
   transition: 0.3s; // モーダルウィンドウを開く時のアニメーション速度を指定する
   &__contents {
     text-align: center;
@@ -79,7 +79,7 @@
 
 .modal.active {
   opacity: 1;
-  visibility: visible; //表示
+  visibility: visible;
 }
 
 .mask {
