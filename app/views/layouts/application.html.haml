@@ -12,5 +12,4 @@
     = yield
     = render partial: "layouts/pagetop"
     = javascript_include_tag 'application', defer: 'defer'
-    -# defer = HTMLパースの読み込みを妨害せず、コンテンツの読み込みの高速化する
-    -# asyncとの違いは、scriptタグを書いた順番で読み込まれるどうか
+    -# defer: 'defer' scriptを非同期ダウンロードし、HTMLパース完了後にscriptを実行する
