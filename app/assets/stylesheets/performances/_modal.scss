@@ -13,7 +13,6 @@
   visibility: hidden; // アニメーションをつける
   transition: 0.3s; //ボタンを押した時に動きをつける
   &__contents {
-    font-size: 16px;
     text-align: center;
     &__title {
       padding: 10px;
