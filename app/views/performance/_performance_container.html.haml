@@ -11,23 +11,6 @@
       .badge-text
         .badge-text__index
           %a#modalOpen GUEST USER
-    / モーダルウィンドウ開始
-    -# %section#modalArea.modalArea
-    -#   #modalBg.modalBg
-    -#   .modalWrapper
-    -#     .modalContents
-    -#       .modalContents__title
-    -#         you are choice a icon
-    -#       .modalContents__icon
-    -#         %i.fas.fa-user-lock
-    -#       .modalContents__icon-title
-    -#         GUEST USER
-    -#       .modalContents__output
-    -#         Please click here for
-    -#         = link_to "output.", "/"
-    -#     #closeModal.closeModal
-    -#       ×
-    / モーダルウィンドウ終了
     .badge-icon__block
       %i.fas.fa-toggle-on
       .badge-text
@@ -120,12 +103,16 @@
         .badge-text__index
           %a#openModal ？？？？？？？？？
 .modal#modal
-  %h2 お問い合わせ
   .modal__contents
-    ここに内容が入ります
-    %br ここに内容が入ります
-    ここに内容が入ります
-    %br ここに内容が入ります
-    ここに内容が入ります
-  %a#modalClose 閉じる
+    .modal__contents__title
+      you are choice a icon
+    .modal__contents__icon
+      %i.fas.fa-user-lock
+    .modal__contents__icon-title
+      GUEST USER
+    .modal__contents__output
+      Please click here for
+      = link_to "output.", "/"
+  %a#modalClose.modalClose
+    ×
 .mask#mask
