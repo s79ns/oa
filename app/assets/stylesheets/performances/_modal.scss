@@ -8,10 +8,10 @@
   width: 30%;
   padding: 50px;
   border-radius: 5px;
-  z-index: 1000; // .mask（バックグラウンドの重なり順を調整）
-  opacity: 0; //visibility: hidden;とセット
-  visibility: hidden; // アニメーションをつける
-  transition: 0.3s; //ボタンを押した時に動きをつける
+  z-index: 1000; // modalを優先し、maskとの重なり順を調整する
+  opacity: 0; // 透明にし、モーダルウィンドウを開く時にアニメーションをつける
+  visibility: hidden; // 非表示にし、モーダルウィンドウ内のコンテンツにアクセスしないようにする
+  transition: 0.3s; // モーダルウィンドウを開く時のアニメーション速度を指定する
   &__contents {
     text-align: center;
     &__title {
@@ -63,39 +63,38 @@
       }
     }
   }
-}
-.modalClose {
-  position: absolute;
-  top: 1.2rem;
-  right: 1.2rem;
-  padding: 5px 8px 8px 8px;
-  font-size: 25px;
-  cursor: pointer;
-  background-color: #999999;
-  color: #fff;
-  border-radius: 5px;
-  line-height: 20px;
-}
-.modalClose:hover {
-  opacity: 0.8;
+  .modalClose {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    padding: 5px 8px 8px 8px;
+    line-height: 20px;
+    font-size: 25px;
+    background-color: #999999;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
 }
 
 .modal.active {
   opacity: 1;
-  visibility: visible;
+  visibility: visible; //表示
 }
+
 .mask {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
   height: 100%;
-  background-color: black;
-  z-index: 999; // .modalを優先して表示するようにする
-  opacity: 0; //visibility: hidden;とセット
-  visibility: hidden; // アニメーションをつける
-  transition: 0.3s; //ボタンを押した時に動きをつける
+  width: 100%;
+  background-color: #000;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
 }
+
 .mask.active {
   opacity: 0.7;
   visibility: visible;
