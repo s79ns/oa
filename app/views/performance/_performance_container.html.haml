@@ -10,23 +10,23 @@
       %i.fas.fa-user-lock
       .badge-text
         .badge-text__index
-          %a#openModal GUEST USER
+          %a#modalOpen GUEST USER
     / モーダルウィンドウ開始
-    %section#modalArea.modalArea
-      #modalBg.modalBg
-      .modalWrapper
-        .modalContents
-          .modalContents__title
-            you are choice a icon
-          .modalContents__icon
-            %i.fas.fa-user-lock
-          .modalContents__icon-title
-            GUEST USER
-          .modalContents__output
-            Please click here for
-            = link_to "output.", "/"
-        #closeModal.closeModal
-          ×
+    -# %section#modalArea.modalArea
+    -#   #modalBg.modalBg
+    -#   .modalWrapper
+    -#     .modalContents
+    -#       .modalContents__title
+    -#         you are choice a icon
+    -#       .modalContents__icon
+    -#         %i.fas.fa-user-lock
+    -#       .modalContents__icon-title
+    -#         GUEST USER
+    -#       .modalContents__output
+    -#         Please click here for
+    -#         = link_to "output.", "/"
+    -#     #closeModal.closeModal
+    -#       ×
     / モーダルウィンドウ終了
     .badge-icon__block
       %i.fas.fa-toggle-on
@@ -119,3 +119,13 @@
       .badge-text
         .badge-text__index
           %a#openModal ？？？？？？？？？
+.modal#modal
+  %h2 お問い合わせ
+  .modal__contents
+    ここに内容が入ります
+    %br ここに内容が入ります
+    ここに内容が入ります
+    %br ここに内容が入ります
+    ここに内容が入ります
+  %a#modalClose 閉じる
+.mask#mask
