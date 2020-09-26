@@ -9,8 +9,8 @@
   padding: 50px;
   border-radius: 5px;
   z-index: 1000; // modal > mask
-  opacity: 0; // モーダルウィンドウを開く時にアニメーションをつける
-  visibility: hidden; // モーダルウィンドウ内のコンテンツにアクセスしないようにする
+  opacity: 0; // 透明化させ、モーダルウィンドウを開く時にアニメーションをつける
+  visibility: hidden; // 非表示にし、モーダルウィンドウ内のコンテンツにアクセスしないようにする
   transition: 0.3s; // モーダルウィンドウを開く時のアニメーション速度を指定する
   &__contents {
     text-align: center;
