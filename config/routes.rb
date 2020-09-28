@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'games/index'
   root "performance#index"
   get 'toppages/index'
   get 'performance/index'
