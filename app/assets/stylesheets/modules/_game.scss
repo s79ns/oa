@@ -1,0 +1,57 @@
+.game-wrapper {
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #ddd;
+  border-radius: 5px;
+  max-width: 1000px;
+  width: 100%;
+  &__section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    &__enemy {
+      margin-bottom: 20px;
+    }
+    h2 {
+      font-weight: bold;
+      font-size: 20px;
+      text-align: center;
+    }
+    .hp {
+      display: flex;
+      justify-content: center;
+      margin: 10px;
+    }
+    .hp > div:first-of-type::after {
+      content: "/";
+      // hp隣の一番最初のdivタグに対して/をつける
+      margin: 0 5px;
+    }
+    &__player {
+      .attack {
+        margin: 50px auto 0;
+        width: 200px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f44;
+        color: #fff;
+        border: 0;
+        outline: none;
+        font-size: 20px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    }
+  }
+  &__line {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
