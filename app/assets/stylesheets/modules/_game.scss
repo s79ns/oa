@@ -43,6 +43,10 @@
         border-radius: 5px;
         cursor: pointer;
       }
+      .attack.deactive {
+        pointer-events: none; //押せなくする
+        opacity: 0.5;
+      }
     }
   }
   &__line {
