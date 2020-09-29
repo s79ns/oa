@@ -43,15 +43,14 @@
         border-radius: 5px;
         cursor: pointer;
       }
+      .attack.deactive {
+        pointer-events: none; //押せなくする
+        opacity: 0.5;
+      }
     }
   }
   &__line {
     text-align: center;
     margin-bottom: 15px;
   }
-}
-
-a {
-  color: #333;
-  text-decoration: none;
 }
