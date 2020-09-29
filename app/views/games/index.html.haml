@@ -5,6 +5,8 @@
   .game-wrapper__section
     .game-wrapper__section__enemy
       %h2#enemyName
+      .hpGauge
+        .hpGauge__value#currentEnemyHpGaugeValue
       .hp
         #currentEnemyHp
         #EnemyHp
@@ -12,6 +14,8 @@
       VS
     .game-wrapper__section__player
       %h2#playerName
+      .hpGauge
+        .hpGauge__value#currentPlayerHpGaugeValue
       .hp
         #currentPlayerHp
         #PlayerHp

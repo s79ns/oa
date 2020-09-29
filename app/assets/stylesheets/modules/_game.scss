@@ -17,6 +17,16 @@
       font-size: 20px;
       text-align: center;
     }
+    .hpGauge {
+      border: 1px solid #777;
+      margin-top: 10px;
+      &__value {
+        height: 15px;
+        background-color: #6bf;
+        transition: 0.3s;
+        width: 100%; //hpが100%だとtransitionの対象外になるので、widthを付与する
+      }
+    }
     .hp {
       display: flex;
       justify-content: center;
