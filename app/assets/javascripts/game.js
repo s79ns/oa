@@ -73,18 +73,23 @@ document.getElementById("attack").addEventListener("click", function () {
 
   if (enemyData["hp"] <= 0) {
     alert("勝ったッ！第三部完ッ！！");
+
     endGame = true;
 
     // HPがマイナス表示されないように0に書き換える
     enemyData["hp"] = 0;
     insertText("currentEnemyHp", enemyData["hp"]);
+
     // HPゲージを0にする
     document.getElementById("currentEnemyHpGaugeValue").style.width = "0%";
   } else if (playerData["hp"] <= 0) {
     alert("再起不能 -リタイヤ-");
+
     endGame = true;
+
     playerData["hp"] = 0;
     insertText(["currentPlayerHp"], playerData["hp"]);
+
     document.getElementById("currentPlayerHpGaugeValue").style.width = "0%";
   }
 
