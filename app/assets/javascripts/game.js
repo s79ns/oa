@@ -5,29 +5,12 @@ const playerData = {
   mind: 5,
 };
 
-const enemiesData = [
-  {
-    name: "ねんれいとみけいけんのかべ",
-    hp: 200,
-    skill: 30,
-    mind: 1,
-  },
-  {
-    name: "youtubeのゆうわく",
-    hp: 120,
-    skill: 20,
-    mind: 0,
-  },
-  {
-    name: "じゅしんりょうのとりたて",
-    hp: 50,
-    skill: 10,
-    mind: 10,
-  },
-];
-
-// enemiesDataの配列からランダムに取得する
-const enemyData = enemiesData[Math.floor(Math.random() * enemiesData.length)];
+const enemyData = {
+  name: "ねんれいとみけいけんのかべ",
+  hp: 120,
+  skill: 25,
+  mind: 0,
+};
 
 // 各DataにmaxHpを作成して現在のhpを代入
 playerData["maxHp"] = playerData["hp"];
