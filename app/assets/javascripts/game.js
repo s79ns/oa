@@ -1,16 +1,20 @@
 const playerData = {
   name: "エンジニアになりたいむしょく",
-  hp: 50,
-  skill: 50,
-  mind: 10,
+  hp: 20,
+  skill: 30,
+  mind: 5,
 };
 
 const enemyData = {
   name: "ねんれいとみけいけんのかべ",
-  hp: 100,
+  hp: 120,
   skill: 25,
-  mind: 5,
+  mind: 0,
 };
+
+// 各DataにmaxHpを作成して現在のhpを代入
+playerData["maxHp"] = playerData["hp"];
+enemyData["maxHp"] = enemyData["hp"];
 
 function insertText(id, text) {
   document.getElementById(id).textContent = text;
@@ -57,22 +61,36 @@ document.getElementById("attack").addEventListener("click", function () {
 
   enemyData["hp"] -= playerDamage;
   playerData["hp"] -= enemyDamage;
+
   insertText("currentEnemyHp", enemyData["hp"]);
   insertText("currentPlayerHp", playerData["hp"]);
 
+  // HPゲージ style.width（取得した要素の幅を指定する）
+  document.getElementById("currentEnemyHpGaugeValue").style.width =
+    (enemyData["hp"] / enemyData["maxHp"]) * 100 + "%";
+  document.getElementById("currentPlayerHpGaugeValue").style.width =
+    (playerData["hp"] / playerData["maxHp"]) * 100 + "%";
+
   if (enemyData["hp"] <= 0) {
     alert("勝ったッ！第三部完ッ！！");
+
     endGame = true;
 
     // HPがマイナス表示されないように0に書き換える
     enemyData["hp"] = 0;
     insertText("currentEnemyHp", enemyData["hp"]);
+
+    // HPゲージを0にする
+    document.getElementById("currentEnemyHpGaugeValue").style.width = "0%";
   } else if (playerData["hp"] <= 0) {
     alert("再起不能 -リタイヤ-");
+
     endGame = true;
 
     playerData["hp"] = 0;
     insertText(["currentPlayerHp"], playerData["hp"]);
+
+    document.getElementById("currentPlayerHpGaugeValue").style.width = "0%";
   }
 
   // ゲーム完了フラグを満たせばクラスを付与してボタンを押せなくする
