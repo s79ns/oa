@@ -5,12 +5,29 @@ const playerData = {
   mind: 5,
 };
 
-const enemyData = {
-  name: "ねんれいとみけいけんのかべ",
-  hp: 120,
-  skill: 25,
-  mind: 0,
-};
+const enemiesData = [
+  {
+    name: "ねんれいとみけいけんのかべ",
+    hp: 200,
+    skill: 30,
+    mind: 1,
+  },
+  {
+    name: "youtubeのゆうわく",
+    hp: 120,
+    skill: 20,
+    mind: 0,
+  },
+  {
+    name: "じゅしんりょうのとりたて",
+    hp: 50,
+    skill: 10,
+    mind: 10,
+  },
+];
+
+// enemiesDataの配列からランダムに要素を取得する
+const enemyData = enemiesData[Math.floor(Math.random() * enemiesData.length)];
 
 // 各DataにmaxHpを作成して現在のhpを代入
 playerData["maxHp"] = playerData["hp"];
@@ -43,6 +60,16 @@ function damegeCalulation(skill, mind) {
   }
 }
 
+// 戦闘ログ関数
+function insertLog(texts) {
+  const logsElement = document.getElementById("logs");
+  const createLog = document.createElement("li");
+  createLog.innerHTML = texts;
+
+  // insertBefore 要素(logsElement)の最初の子要素として入れる(入れる要素, どこに,どの要素か)
+  logsElement.insertBefore(createLog, logsElement.firstChild);
+}
+
 insertText("enemyName", enemyData["name"]);
 insertText("EnemyHp", enemyData["hp"]);
 insertText("currentEnemyHp", enemyData["hp"]);
@@ -59,11 +86,33 @@ document.getElementById("attack").addEventListener("click", function () {
   const playerDamage = damegeCalulation(playerData["skill"], enemyData["mind"]);
   const enemyDamage = damegeCalulation(playerData["mind"], enemyData["skill"]);
 
+  // ダメージ計算
   enemyData["hp"] -= playerDamage;
   playerData["hp"] -= enemyDamage;
 
+  // HP書き換え処理
   insertText("currentEnemyHp", enemyData["hp"]);
   insertText("currentPlayerHp", playerData["hp"]);
+
+  // 戦闘ログ
+  insertLog(
+    playerData["name"] +
+      "の攻撃！" +
+      enemyData["name"] +
+      "に" +
+      playerDamage +
+      "の" +
+      "ダメージ！"
+  );
+  insertLog(
+    enemyData["name"] +
+      "の攻撃！" +
+      playerData["name"] +
+      "に" +
+      enemyDamage +
+      "の" +
+      "ダメージ！"
+  );
 
   // HPゲージ style.width（取得した要素の幅を指定する）
   document.getElementById("currentEnemyHpGaugeValue").style.width =
