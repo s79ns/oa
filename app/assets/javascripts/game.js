@@ -1,8 +1,8 @@
 const playerData = {
   name: "エンジニアになりたいむしょく",
-  hp: 20,
-  skill: 30,
-  mind: 5,
+  hp: 100,
+  skill: 20,
+  mind: 10,
 };
 
 const enemiesData = [
@@ -10,7 +10,7 @@ const enemiesData = [
     name: "ねんれいとみけいけんのかべ",
     hp: 200,
     skill: 30,
-    mind: 1,
+    mind: 5,
   },
   {
     name: "youtubeのゆうわく",
@@ -20,7 +20,7 @@ const enemiesData = [
   },
   {
     name: "じゅしんりょうのとりたて",
-    hp: 50,
+    hp: 80,
     skill: 10,
     mind: 10,
   },
@@ -94,10 +94,19 @@ document.getElementById("attack").addEventListener("click", function () {
   const playerName = '<span style= "color: blue;">' + playerData["name"] + "</span>";
   const enemyName = '<span style= "color: red;">' + enemyData["name"] + "</span>";
 
-  // プレイヤー側
   // ダメージ変数
-  const playerDamage = damegeCalulation(playerData["skill"], enemyData["mind"]);
+  let playerDamage = damegeCalulation(playerData["skill"], enemyData["mind"]);
 
+  //クリティカル変数
+  const criticalHitRate = 0.2;
+
+  // クリティカル条件式
+  if (Math.random() < criticalHitRate) {
+    playerDamage *= 2;
+    insertLog(playerName + "の攻撃！SMAAAASH!!" + enemyName + "に" + playerDamage + "のダメージ！");
+  } else {
+    insertLog(playerName + "の攻撃！" + enemyName + "に" + playerDamage + "のダメージ！");
+  }
   // ダメージ計算
   enemyData["hp"] -= playerDamage;
 
@@ -106,9 +115,6 @@ document.getElementById("attack").addEventListener("click", function () {
 
   // HPゲージ style.width（取得した要素の幅を指定する）
   document.getElementById("currentEnemyHpGaugeValue").style.width = (enemyData["hp"] / enemyData["maxHp"]) * 100 + "%";
-
-  // 戦闘ログ
-  insertLog(playerName + "の攻撃！" + enemyName + "に" + playerDamage + "の" + "ダメージ！");
 
   if (enemyData["hp"] <= 0) {
     alert("勝ったッ！第三部完ッ！！");
@@ -124,11 +130,17 @@ document.getElementById("attack").addEventListener("click", function () {
 
   // 勝敗が決まっていなければ処理をする（! 処理を反転）
   if (!victory) {
-    const enemyDamage = damegeCalulation(playerData["mind"], enemyData["skill"]);
+    let enemyDamage = damegeCalulation(playerData["mind"], enemyData["skill"]);
+    if (Math.random() < criticalHitRate) {
+      enemyDamage *= 2;
+      insertLog(enemyName + "の攻撃！SMAAAASH!!" + playerName + "に" + enemyDamage + "のダメージ！");
+    } else {
+      insertLog(enemyName + "の攻撃！" + playerName + "に" + enemyDamage + "のダメージ！");
+    }
+
     playerData["hp"] -= enemyDamage;
     insertText("currentPlayerHp", playerData["hp"]);
     document.getElementById("currentPlayerHpGaugeValue").style.width = (playerData["hp"] / playerData["maxHp"]) * 100 + "%";
-    insertLog(enemyName + "の攻撃！" + playerName + "に" + enemyDamage + "の" + "ダメージ！");
 
     if (playerData["hp"] <= 0) {
       alert("再起不能 -リタイヤ-");
