@@ -60,11 +60,18 @@ function damegeCalulation(skill, mind) {
   }
 }
 
+// 戦闘ログナンバー変数
+let logIndex = 0;
+
 // 戦闘ログ関数
 function insertLog(texts) {
   const logsElement = document.getElementById("logs");
   const createLog = document.createElement("li");
-  createLog.innerHTML = texts;
+
+  // logIndex変数に1ずつ足していく（logIndex = logIndex + 1;と同定義）
+  logIndex++;
+
+  createLog.innerHTML = logIndex + ": " + texts;
 
   // insertBefore 要素(logsElement)の最初の子要素として入れる(入れる要素, どこに,どの要素か)
   logsElement.insertBefore(createLog, logsElement.firstChild);
@@ -82,6 +89,12 @@ document.getElementById("attack").addEventListener("click", function () {
   // ゲーム完了フラグ
   let endGame = false;
 
+  // プレイヤーと敵の名前の色を変える変数
+  const playerName =
+    '<span style= "color: blue;">' + playerData["name"] + "</span>";
+  const enemyName =
+    '<span style= "color: red;">' + enemyData["name"] + "</span>";
+
   // ダメージ変数
   const playerDamage = damegeCalulation(playerData["skill"], enemyData["mind"]);
   const enemyDamage = damegeCalulation(playerData["mind"], enemyData["skill"]);
@@ -96,18 +109,18 @@ document.getElementById("attack").addEventListener("click", function () {
 
   // 戦闘ログ
   insertLog(
-    playerData["name"] +
+    playerName +
       "の攻撃！" +
-      enemyData["name"] +
+      enemyName +
       "に" +
       playerDamage +
       "の" +
       "ダメージ！"
   );
   insertLog(
-    enemyData["name"] +
+    enemyName +
       "の攻撃！" +
-      playerData["name"] +
+      playerName +
       "に" +
       enemyDamage +
       "の" +
