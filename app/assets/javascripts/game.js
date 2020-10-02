@@ -60,11 +60,18 @@ function damegeCalulation(skill, mind) {
   }
 }
 
+// 戦闘ログナンバー変数
+let logIndex = 0;
+
 // 戦闘ログ関数
 function insertLog(texts) {
   const logsElement = document.getElementById("logs");
   const createLog = document.createElement("li");
-  createLog.innerHTML = texts;
+
+  // logIndex変数に1ずつ足していく（logIndex = logIndex + 1;と同定義）
+  logIndex++;
+
+  createLog.innerHTML = logIndex + ": " + texts;
 
   // insertBefore 要素(logsElement)の最初の子要素として入れる(入れる要素, どこに,どの要素か)
   logsElement.insertBefore(createLog, logsElement.firstChild);
@@ -79,51 +86,33 @@ insertText("PlayerHp", playerData["hp"]);
 insertText("currentPlayerHp", playerData["hp"]);
 
 document.getElementById("attack").addEventListener("click", function () {
-  // ゲーム完了フラグ
-  let endGame = false;
+  // 勝敗フラグ
+  let victory = false;
+  let defeat = false;
 
+  // プレイヤーと敵の名前の色を変える変数
+  const playerName = '<span style= "color: blue;">' + playerData["name"] + "</span>";
+  const enemyName = '<span style= "color: red;">' + enemyData["name"] + "</span>";
+
+  // プレイヤー側
   // ダメージ変数
   const playerDamage = damegeCalulation(playerData["skill"], enemyData["mind"]);
-  const enemyDamage = damegeCalulation(playerData["mind"], enemyData["skill"]);
 
   // ダメージ計算
   enemyData["hp"] -= playerDamage;
-  playerData["hp"] -= enemyDamage;
 
   // HP書き換え処理
   insertText("currentEnemyHp", enemyData["hp"]);
-  insertText("currentPlayerHp", playerData["hp"]);
-
-  // 戦闘ログ
-  insertLog(
-    playerData["name"] +
-      "の攻撃！" +
-      enemyData["name"] +
-      "に" +
-      playerDamage +
-      "の" +
-      "ダメージ！"
-  );
-  insertLog(
-    enemyData["name"] +
-      "の攻撃！" +
-      playerData["name"] +
-      "に" +
-      enemyDamage +
-      "の" +
-      "ダメージ！"
-  );
 
   // HPゲージ style.width（取得した要素の幅を指定する）
-  document.getElementById("currentEnemyHpGaugeValue").style.width =
-    (enemyData["hp"] / enemyData["maxHp"]) * 100 + "%";
-  document.getElementById("currentPlayerHpGaugeValue").style.width =
-    (playerData["hp"] / playerData["maxHp"]) * 100 + "%";
+  document.getElementById("currentEnemyHpGaugeValue").style.width = (enemyData["hp"] / enemyData["maxHp"]) * 100 + "%";
+
+  // 戦闘ログ
+  insertLog(playerName + "の攻撃！" + enemyName + "に" + playerDamage + "の" + "ダメージ！");
 
   if (enemyData["hp"] <= 0) {
     alert("勝ったッ！第三部完ッ！！");
-
-    endGame = true;
+    victory = true;
 
     // HPがマイナス表示されないように0に書き換える
     enemyData["hp"] = 0;
@@ -131,19 +120,29 @@ document.getElementById("attack").addEventListener("click", function () {
 
     // HPゲージを0にする
     document.getElementById("currentEnemyHpGaugeValue").style.width = "0%";
-  } else if (playerData["hp"] <= 0) {
-    alert("再起不能 -リタイヤ-");
+  }
 
-    endGame = true;
+  // 勝敗が決まっていなければ処理をする（! 処理を反転）
+  if (!victory) {
+    const enemyDamage = damegeCalulation(playerData["mind"], enemyData["skill"]);
+    playerData["hp"] -= enemyDamage;
+    insertText("currentPlayerHp", playerData["hp"]);
+    document.getElementById("currentPlayerHpGaugeValue").style.width = (playerData["hp"] / playerData["maxHp"]) * 100 + "%";
+    insertLog(enemyName + "の攻撃！" + playerName + "に" + enemyDamage + "の" + "ダメージ！");
 
-    playerData["hp"] = 0;
-    insertText(["currentPlayerHp"], playerData["hp"]);
+    if (playerData["hp"] <= 0) {
+      alert("再起不能 -リタイヤ-");
+      defeat = true;
 
-    document.getElementById("currentPlayerHpGaugeValue").style.width = "0%";
+      playerData["hp"] = 0;
+      insertText(["currentPlayerHp"], playerData["hp"]);
+
+      document.getElementById("currentPlayerHpGaugeValue").style.width = "0%";
+    }
   }
 
   // ゲーム完了フラグを満たせばクラスを付与してボタンを押せなくする
-  if (endGame) {
+  if (victory || defeat) {
     this.classList.add("deactive");
   }
 });

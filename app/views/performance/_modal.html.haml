@@ -21,13 +21,10 @@
     const toggle = [modalOpen, modalClose, mask];
 
     for (let i = 0, len = toggle.length; i < len; i++) {
-      toggle[i].addEventListener(
-        "click",
-        function () {
-          modal.classList.toggle("active");
-          mask.classList.toggle("active");
-        },
-        false
+      toggle[i].addEventListener("click", function () {
+        modal.classList.toggle("active");
+        mask.classList.toggle("active");
+        },false
       );
     }
   })();
