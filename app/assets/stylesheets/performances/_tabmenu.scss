@@ -1,0 +1,31 @@
+.tabmenu-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 50px auto;
+  background-color: #eee;
+  padding: 20px;
+  &__tabs {
+    display: flex;
+    justify-content: space-around;
+    li {
+      width: 32%;
+    }
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+      background-color: #bbb;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      transition: 0.3s;
+    }
+    a:hover {
+      opacity: 0.7;
+    }
+    a.active {
+      background-color: #fff;
+      opacity: 1;
+    }
+  }
+}

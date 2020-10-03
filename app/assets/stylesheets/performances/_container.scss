@@ -65,9 +65,11 @@
     .fas.fa-project-diagram {
       color: #ff9933;
     }
+    .fas.fa-box {
+      color: #ff5192;
+    }
   }
   .badge-text {
-    color: gold;
     font-size: 10px;
     font-family: monospace;
     font-weight: bold;
@@ -76,6 +78,8 @@
     &__index {
       // アンダーラインを隠しておいて表示させる
       a {
+        color: gold;
+        text-decoration: none;
         position: relative;
         display: inline-block;
         transition: 0.3s;
