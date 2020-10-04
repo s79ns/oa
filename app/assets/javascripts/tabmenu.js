@@ -11,3 +11,8 @@ for (let i = 0; i < tabs.length; i++) {
     contents[i].classList.add("active");
   });
 }
+
+// タブをクリックすると、一旦activeクラスを削除し、クリックしたタブ及び、対象のコンテンツにactiveクラスを付与する
+// aタグにhref属性がある場合は
+// tabs[i].addEventListener("click", function (e) {
+// e.preventDefault(); と入力する事で、タブをクリックした時に、ブラウザがリロードされるのを防ぐ
