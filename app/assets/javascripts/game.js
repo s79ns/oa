@@ -85,6 +85,14 @@ insertText("playerName", playerData["name"]);
 insertText("PlayerHp", playerData["hp"]);
 insertText("currentPlayerHp", playerData["hp"]);
 
+// 討伐変数
+let nowkilledNumber = 0;
+let targetKillsNumber = 2;
+
+// 討伐数の書き換え
+insertText("nowkilledNumber", nowkilledNumber);
+insertText("targetkillsNumber", targetKillsNumber);
+
 document.getElementById("attack").addEventListener("click", function () {
   // 勝敗フラグ
   let victory = false;
@@ -156,5 +164,11 @@ document.getElementById("attack").addEventListener("click", function () {
   // ゲーム完了フラグを満たせばクラスを付与してボタンを押せなくする
   if (victory || defeat) {
     this.classList.add("deactive");
+  }
+
+  // 勝ったら討伐数増加
+  if (victory) {
+    nowkilledNumber++;
+    insertText("nowkilledNumber", nowkilledNumber);
   }
 });
