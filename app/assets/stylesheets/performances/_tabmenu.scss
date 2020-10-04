@@ -6,7 +6,7 @@
   padding: 20px;
   &__tabs {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     li {
       width: 32%;
     }
@@ -26,6 +26,16 @@
     a.active {
       background-color: #fff;
       opacity: 1;
+    }
+  }
+  &__contents {
+    li {
+      background-color: #fff;
+      padding: 20px;
+      display: none;
+    }
+    li.active {
+      display: block;
     }
   }
 }
