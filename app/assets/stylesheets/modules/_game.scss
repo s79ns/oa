@@ -38,6 +38,14 @@
       margin: 0 5px;
     }
     &__player {
+      .killedNumbers {
+        display: flex;
+        justify-content: flex-end;
+      }
+      .killedNumbers > div:first-of-type::after {
+        content: "/";
+        margin: 0 5px;
+      }
       .logs {
         border: 1px solid #777;
         border-radius: 5px;
