@@ -125,7 +125,6 @@ document.getElementById("attack").addEventListener("click", function () {
   document.getElementById("currentEnemyHpGaugeValue").style.width = (enemyData["hp"] / enemyData["maxHp"]) * 100 + "%";
 
   if (enemyData["hp"] <= 0) {
-    alert("勝ったッ！第三部完ッ！！");
     victory = true;
 
     // HPがマイナス表示されないように0に書き換える
@@ -134,6 +133,10 @@ document.getElementById("attack").addEventListener("click", function () {
 
     // HPゲージを0にする
     document.getElementById("currentEnemyHpGaugeValue").style.width = "0%";
+
+    // 戦闘後、gamemask及び、gamemodalにactiveクラスを追加してモーダルを表示
+    document.getElementById("gamemask").classList.add("active");
+    document.getElementById("gamemodal").classList.add("active");
   }
 
   // 勝敗が決まっていなければ処理をする（! 処理を反転）
