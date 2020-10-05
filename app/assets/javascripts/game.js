@@ -26,8 +26,12 @@ const enemiesData = [
   },
 ];
 
+// 初回戦闘時のみmaxHpを定義する挙動の修正
+for (let i = 0; i < enemiesData.length; i++) {
+  enemiesData[i]["maxHp"] = enemiesData[i]["hp"];
+}
 // enemiesDataの配列からランダムに要素を取得する
-const enemyData = enemiesData[Math.floor(Math.random() * enemiesData.length)];
+let enemyData = enemiesData[Math.floor(Math.random() * enemiesData.length)];
 
 // 各DataにmaxHpを作成して現在のhpを代入
 playerData["maxHp"] = playerData["hp"];
@@ -62,6 +66,10 @@ function damegeCalulation(skill, mind) {
 
 // 戦闘ログナンバー変数
 let logIndex = 0;
+
+// 討伐変数
+let nowkilledNumber = 0;
+let targetkillsNumber = 2;
 
 // 戦闘ログ関数
 function insertLog(texts) {
@@ -100,13 +108,9 @@ insertText("playerName", playerData["name"]);
 insertText("PlayerHp", playerData["hp"]);
 insertText("currentPlayerHp", playerData["hp"]);
 
-// 討伐変数
-let nowkilledNumber = 0;
-let targetKillsNumber = 2;
-
 // 討伐数の書き換え
 insertText("nowkilledNumber", nowkilledNumber);
-insertText("targetkillsNumber", targetKillsNumber);
+insertText("targetkillsNumber", targetkillsNumber);
 
 document.getElementById("attack").addEventListener("click", function () {
   // 勝敗フラグ
@@ -135,6 +139,10 @@ document.getElementById("attack").addEventListener("click", function () {
 
   // HP書き換え処理
   insertText("currentEnemyHp", enemyData["hp"]);
+
+  console.log(enemyData["hp"]);
+  console.log(enemyData["maxHp"]);
+  console.log(enemyData["hp"] / enemyData["maxHp"]);
 
   // HPゲージ style.width（取得した要素の幅を指定する）
   document.getElementById("currentEnemyHpGaugeValue").style.width = (enemyData["hp"] / enemyData["maxHp"]) * 100 + "%";
@@ -189,5 +197,32 @@ document.getElementById("attack").addEventListener("click", function () {
   if (victory) {
     nowkilledNumber++;
     insertText("nowkilledNumber", nowkilledNumber);
+
+    // 倒した数と目標を比較し、目標を達成できたらクリアリザルトを表示
+    if (nowkilledNumber === targetkillsNumber) {
+      gamemodal("YOU WIN!", true);
+    }
   }
+});
+
+// To be continued...ボタンを押した処理
+document.getElementById("modalNextButton").addEventListener("click", function () {
+  // 0になったHPの代入
+  enemyData["hp"] = enemyData["maxHp"];
+
+  // 敵データの書き換え処理
+  enemyData = enemiesData[Math.floor(Math.random() * enemiesData.length)];
+  insertText("enemyName", enemyData["name"]);
+  insertText("currentEnemyHp", enemyData["hp"]);
+  insertText("EnemyHp", enemyData["hp"]);
+
+  // HPゲージを満タンにする
+  document.getElementById("currentEnemyHpGaugeValue").style.width = "100%";
+
+  // モーダルのactiveクラスを削除して、モーダルを消去する
+  document.getElementById("gamemodal").classList.remove("active");
+  document.getElementById("gamemask").classList.remove("active");
+
+  // 攻撃ボタンのdeactiveクラスを削除して、再度ボタンを押せるようにする
+  document.getElementById("attack").classList.remove("deactive");
 });
