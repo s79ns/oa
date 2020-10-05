@@ -63,6 +63,10 @@ function damegeCalulation(skill, mind) {
 // 戦闘ログナンバー変数
 let logIndex = 0;
 
+// 討伐変数
+let nowkilledNumber = 0;
+let targetkillsNumber = 2;
+
 // 戦闘ログ関数
 function insertLog(texts) {
   const logsElement = document.getElementById("logs");
@@ -100,13 +104,9 @@ insertText("playerName", playerData["name"]);
 insertText("PlayerHp", playerData["hp"]);
 insertText("currentPlayerHp", playerData["hp"]);
 
-// 討伐変数
-let nowkilledNumber = 0;
-let targetKillsNumber = 2;
-
 // 討伐数の書き換え
 insertText("nowkilledNumber", nowkilledNumber);
-insertText("targetkillsNumber", targetKillsNumber);
+insertText("targetkillsNumber", targetkillsNumber);
 
 document.getElementById("attack").addEventListener("click", function () {
   // 勝敗フラグ
@@ -189,6 +189,11 @@ document.getElementById("attack").addEventListener("click", function () {
   if (victory) {
     nowkilledNumber++;
     insertText("nowkilledNumber", nowkilledNumber);
+
+    // 倒した数と目標を比較し、目標を達成できたらクリアリザルトを表示
+    if (nowkilledNumber === targetkillsNumber) {
+      gamemodal("YOU WIN!", true);
+    }
   }
 });
 
