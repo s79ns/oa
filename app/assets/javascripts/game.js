@@ -140,10 +140,6 @@ document.getElementById("attack").addEventListener("click", function () {
   // HP書き換え処理
   insertText("currentEnemyHp", enemyData["hp"]);
 
-  console.log(enemyData["hp"]);
-  console.log(enemyData["maxHp"]);
-  console.log(enemyData["hp"] / enemyData["maxHp"]);
-
   // HPゲージ style.width（取得した要素の幅を指定する）
   document.getElementById("currentEnemyHpGaugeValue").style.width = (enemyData["hp"] / enemyData["maxHp"]) * 100 + "%";
 
