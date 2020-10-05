@@ -8,7 +8,7 @@ const playerData = {
 const enemiesData = [
   {
     name: "ねんれいとみけいけんのかべ",
-    hp: 200,
+    hp: 300,
     skill: 30,
     mind: 5,
   },
@@ -77,6 +77,21 @@ function insertLog(texts) {
   logsElement.insertBefore(createLog, logsElement.firstChild);
 }
 
+// 戦闘後のモーダル関数
+function gamemodal(titlename, hiddenNextButton = false) {
+  // 戦闘後、gamemask及び、gamemodalにactiveクラスを追加してモーダルを表示
+  document.getElementById("gamemask").classList.add("active");
+  document.getElementById("gamemodal").classList.add("active");
+
+  // 名前を書き換える部分を引数に指定
+  document.getElementById("modalTitle").textContent = titlename;
+
+  // hiddenNextButtonという引数を、初期値falseの状態で作り、trueでhiddenクラスを付与する
+  if (hiddenNextButton) {
+    document.getElementById("modalNextButton").classList.add("hidden");
+  }
+}
+
 insertText("enemyName", enemyData["name"]);
 insertText("EnemyHp", enemyData["hp"]);
 insertText("currentEnemyHp", enemyData["hp"]);
@@ -84,6 +99,14 @@ insertText("currentEnemyHp", enemyData["hp"]);
 insertText("playerName", playerData["name"]);
 insertText("PlayerHp", playerData["hp"]);
 insertText("currentPlayerHp", playerData["hp"]);
+
+// 討伐変数
+let nowkilledNumber = 0;
+let targetKillsNumber = 2;
+
+// 討伐数の書き換え
+insertText("nowkilledNumber", nowkilledNumber);
+insertText("targetkillsNumber", targetKillsNumber);
 
 document.getElementById("attack").addEventListener("click", function () {
   // 勝敗フラグ
@@ -117,7 +140,6 @@ document.getElementById("attack").addEventListener("click", function () {
   document.getElementById("currentEnemyHpGaugeValue").style.width = (enemyData["hp"] / enemyData["maxHp"]) * 100 + "%";
 
   if (enemyData["hp"] <= 0) {
-    alert("勝ったッ！第三部完ッ！！");
     victory = true;
 
     // HPがマイナス表示されないように0に書き換える
@@ -126,6 +148,9 @@ document.getElementById("attack").addEventListener("click", function () {
 
     // HPゲージを0にする
     document.getElementById("currentEnemyHpGaugeValue").style.width = "0%";
+
+    // モーダル関数を呼び出し、名前を書き換えて表示する
+    gamemodal(enemyData["name"] + "を倒したッ！！");
   }
 
   // 勝敗が決まっていなければ処理をする（! 処理を反転）
@@ -143,18 +168,26 @@ document.getElementById("attack").addEventListener("click", function () {
     document.getElementById("currentPlayerHpGaugeValue").style.width = (playerData["hp"] / playerData["maxHp"]) * 100 + "%";
 
     if (playerData["hp"] <= 0) {
-      alert("再起不能 -リタイヤ-");
       defeat = true;
 
       playerData["hp"] = 0;
       insertText(["currentPlayerHp"], playerData["hp"]);
 
       document.getElementById("currentPlayerHpGaugeValue").style.width = "0%";
+
+      // モーダル関数を呼び出し、hiddenNextButtonフラグをtrueにし、hiddenクラスを追加する
+      gamemodal(playerData["name"] + "は傷つき倒れた・・・！", true);
     }
   }
 
   // ゲーム完了フラグを満たせばクラスを付与してボタンを押せなくする
   if (victory || defeat) {
     this.classList.add("deactive");
+  }
+
+  // 勝ったら討伐数増加
+  if (victory) {
+    nowkilledNumber++;
+    insertText("nowkilledNumber", nowkilledNumber);
   }
 });
