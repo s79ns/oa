@@ -78,13 +78,18 @@ function insertLog(texts) {
 }
 
 // 戦闘後のモーダル関数
-function gamemodal(titlename) {
+function gamemodal(titlename, hiddenNextButton = false) {
   // 戦闘後、gamemask及び、gamemodalにactiveクラスを追加してモーダルを表示
   document.getElementById("gamemask").classList.add("active");
   document.getElementById("gamemodal").classList.add("active");
 
   // 名前を書き換える部分を引数に指定
   document.getElementById("modalTitle").textContent = titlename;
+
+  // hiddenNextButtonという引数を、初期値falseの状態で作り、trueでhiddenクラスを付与する
+  if (hiddenNextButton) {
+    document.getElementById("modalNextButton").classList.add("hidden");
+  }
 }
 
 insertText("enemyName", enemyData["name"]);
@@ -170,7 +175,8 @@ document.getElementById("attack").addEventListener("click", function () {
 
       document.getElementById("currentPlayerHpGaugeValue").style.width = "0%";
 
-      gamemodal(playerData["name"] + "は傷つき倒れた・・・！");
+      // モーダル関数を呼び出し、hiddenNextButtonフラグをtrueにし、hiddenクラスを追加する
+      gamemodal(playerData["name"] + "は傷つき倒れた・・・！", true);
     }
   }
 
