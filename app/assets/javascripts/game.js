@@ -26,6 +26,10 @@ const enemiesData = [
   },
 ];
 
+// 初回戦闘時のみmaxHpを定義する挙動の修正
+for (let i = 0; i < enemiesData.length; i++) {
+  enemiesData[i]["maxHp"] = enemiesData[i]["hp"];
+}
 // enemiesDataの配列からランダムに要素を取得する
 let enemyData = enemiesData[Math.floor(Math.random() * enemiesData.length)];
 
@@ -135,6 +139,10 @@ document.getElementById("attack").addEventListener("click", function () {
 
   // HP書き換え処理
   insertText("currentEnemyHp", enemyData["hp"]);
+
+  console.log(enemyData["hp"]);
+  console.log(enemyData["maxHp"]);
+  console.log(enemyData["hp"] / enemyData["maxHp"]);
 
   // HPゲージ style.width（取得した要素の幅を指定する）
   document.getElementById("currentEnemyHpGaugeValue").style.width = (enemyData["hp"] / enemyData["maxHp"]) * 100 + "%";
