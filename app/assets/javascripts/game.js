@@ -27,7 +27,7 @@ const enemiesData = [
 ];
 
 // enemiesDataの配列からランダムに要素を取得する
-const enemyData = enemiesData[Math.floor(Math.random() * enemiesData.length)];
+let enemyData = enemiesData[Math.floor(Math.random() * enemiesData.length)];
 
 // 各DataにmaxHpを作成して現在のhpを代入
 playerData["maxHp"] = playerData["hp"];
@@ -190,4 +190,26 @@ document.getElementById("attack").addEventListener("click", function () {
     nowkilledNumber++;
     insertText("nowkilledNumber", nowkilledNumber);
   }
+});
+
+// To be continued...ボタンを押した処理
+document.getElementById("modalNextButton").addEventListener("click", function () {
+  // 0になったHPの代入
+  enemyData["hp"] = enemyData["maxHp"];
+
+  // 敵データの書き換え処理
+  enemyData = enemiesData[Math.floor(Math.random() * enemiesData.length)];
+  insertText("enemyName", enemyData["name"]);
+  insertText("currentEnemyHp", enemyData["hp"]);
+  insertText("EnemyHp", enemyData["hp"]);
+
+  // HPゲージを満タンにする
+  document.getElementById("currentEnemyHpGaugeValue").style.width = "100%";
+
+  // モーダルのactiveクラスを削除して、モーダルを消去する
+  document.getElementById("gamemodal").classList.remove("active");
+  document.getElementById("gamemask").classList.remove("active");
+
+  // 攻撃ボタンのdeactiveクラスを削除して、再度ボタンを押せるようにする
+  document.getElementById("attack").classList.remove("deactive");
 });
