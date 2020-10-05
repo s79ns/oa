@@ -8,7 +8,7 @@ const playerData = {
 const enemiesData = [
   {
     name: "ねんれいとみけいけんのかべ",
-    hp: 200,
+    hp: 300,
     skill: 30,
     mind: 5,
   },
@@ -77,6 +77,16 @@ function insertLog(texts) {
   logsElement.insertBefore(createLog, logsElement.firstChild);
 }
 
+// 戦闘後のモーダル関数
+function gamemodal(titlename) {
+  // 戦闘後、gamemask及び、gamemodalにactiveクラスを追加してモーダルを表示
+  document.getElementById("gamemask").classList.add("active");
+  document.getElementById("gamemodal").classList.add("active");
+
+  // 名前を書き換える部分を引数に指定
+  document.getElementById("modalTitle").textContent = titlename;
+}
+
 insertText("enemyName", enemyData["name"]);
 insertText("EnemyHp", enemyData["hp"]);
 insertText("currentEnemyHp", enemyData["hp"]);
@@ -134,9 +144,8 @@ document.getElementById("attack").addEventListener("click", function () {
     // HPゲージを0にする
     document.getElementById("currentEnemyHpGaugeValue").style.width = "0%";
 
-    // 戦闘後、gamemask及び、gamemodalにactiveクラスを追加してモーダルを表示
-    document.getElementById("gamemask").classList.add("active");
-    document.getElementById("gamemodal").classList.add("active");
+    // モーダル関数を呼び出し、名前を書き換えて表示する
+    gamemodal(enemyData["name"] + "を倒したッ！！");
   }
 
   // 勝敗が決まっていなければ処理をする（! 処理を反転）
@@ -154,13 +163,14 @@ document.getElementById("attack").addEventListener("click", function () {
     document.getElementById("currentPlayerHpGaugeValue").style.width = (playerData["hp"] / playerData["maxHp"]) * 100 + "%";
 
     if (playerData["hp"] <= 0) {
-      alert("再起不能 -リタイヤ-");
       defeat = true;
 
       playerData["hp"] = 0;
       insertText(["currentPlayerHp"], playerData["hp"]);
 
       document.getElementById("currentPlayerHpGaugeValue").style.width = "0%";
+
+      gamemodal(playerData["name"] + "は傷つき倒れた・・・！");
     }
   }
 
