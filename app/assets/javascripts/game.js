@@ -140,10 +140,6 @@ document.getElementById("attack").addEventListener("click", function () {
   // HP書き換え処理
   insertText("currentEnemyHp", enemyData["hp"]);
 
-  console.log(enemyData["hp"]);
-  console.log(enemyData["maxHp"]);
-  console.log(enemyData["hp"] / enemyData["maxHp"]);
-
   // HPゲージ style.width（取得した要素の幅を指定する）
   document.getElementById("currentEnemyHpGaugeValue").style.width = (enemyData["hp"] / enemyData["maxHp"]) * 100 + "%";
 
@@ -158,6 +154,7 @@ document.getElementById("attack").addEventListener("click", function () {
     document.getElementById("currentEnemyHpGaugeValue").style.width = "0%";
 
     // モーダル関数を呼び出し、名前を書き換えて表示する
+    document.getElementById("modalCloseButton").classList.add("hidden");
     gamemodal(enemyData["name"] + "を倒したッ！！");
   }
 
@@ -185,6 +182,11 @@ document.getElementById("attack").addEventListener("click", function () {
 
       // モーダル関数を呼び出し、hiddenNextButtonフラグをtrueにし、hiddenクラスを追加する
       gamemodal(playerData["name"] + "は傷つき倒れた・・・！", true);
+      document.getElementById("modalCloseButton").classList.remove("hidden");
+      document.getElementById("modalCloseButton").addEventListener("click", function () {
+        document.getElementById("gamemodal").classList.remove("active");
+        document.getElementById("gamemask").classList.remove("active");
+      });
     }
   }
 
@@ -201,6 +203,11 @@ document.getElementById("attack").addEventListener("click", function () {
     // 倒した数と目標を比較し、目標を達成できたらクリアリザルトを表示
     if (nowkilledNumber === targetkillsNumber) {
       gamemodal("YOU WIN!", true);
+      document.getElementById("modalCloseButton").classList.remove("hidden");
+      document.getElementById("modalCloseButton").addEventListener("click", function () {
+        document.getElementById("gamemodal").classList.remove("active");
+        document.getElementById("gamemask").classList.remove("active");
+      });
     }
   }
 });
