@@ -1,0 +1,31 @@
+.menuButton {
+  display: block;
+  height: 80px;
+  width: 80px;
+  background-color: pink;
+  position: fixed;
+  top: 0;
+  right: 0;
+  div {
+    height: 1px;
+    width: 60%;
+    background-color: #333;
+    position: absolute; // menuButtonのpostion: fixedを基準にしている
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); // divの半分だけx軸がずれる
+  }
+}
+// divの1つ目の要素に指定
+.menuButton div:nth-of-type(1) {
+  transform: translate(-50%, -15px);
+}
+
+// divの3つ目の要素に指定
+.menuButton div:nth-of-type(3) {
+  transform: translate(-50%, 15px);
+}
+
+.hamburgermenu-container {
+  height: 200vh;
+}
