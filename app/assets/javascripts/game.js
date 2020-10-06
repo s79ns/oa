@@ -182,6 +182,11 @@ document.getElementById("attack").addEventListener("click", function () {
 
       // モーダル関数を呼び出し、hiddenNextButtonフラグをtrueにし、hiddenクラスを追加する
       gamemodal(playerData["name"] + "は傷つき倒れた・・・！", true);
+      document.getElementById("modalCloseButton").classList.remove("hidden");
+      document.getElementById("modalCloseButton").addEventListener("click", function () {
+        document.getElementById("gamemodal").classList.remove("active");
+        document.getElementById("gamemask").classList.remove("active");
+      });
     }
   }
 
