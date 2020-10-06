@@ -154,6 +154,7 @@ document.getElementById("attack").addEventListener("click", function () {
     document.getElementById("currentEnemyHpGaugeValue").style.width = "0%";
 
     // モーダル関数を呼び出し、名前を書き換えて表示する
+    document.getElementById("modalCloseButton").classList.add("hidden");
     gamemodal(enemyData["name"] + "を倒したッ！！");
   }
 
@@ -197,6 +198,11 @@ document.getElementById("attack").addEventListener("click", function () {
     // 倒した数と目標を比較し、目標を達成できたらクリアリザルトを表示
     if (nowkilledNumber === targetkillsNumber) {
       gamemodal("YOU WIN!", true);
+      document.getElementById("modalCloseButton").classList.remove("hidden");
+      document.getElementById("modalCloseButton").addEventListener("click", function () {
+        document.getElementById("gamemodal").classList.remove("active");
+        document.getElementById("gamemask").classList.remove("active");
+      });
     }
   }
 });
