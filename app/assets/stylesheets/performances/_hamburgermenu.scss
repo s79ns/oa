@@ -1,9 +1,10 @@
+// メニューボタン
 .menuButton {
   display: block;
   height: 50px;
   width: 50px;
   background-color: #fff;
-  position: absolute;
+  position: absolute; // 追従させるならabsoluteではなく、ここと、navにもfixed
   top: 25px;
   right: 130px;
   z-index: 1001;
@@ -46,10 +47,7 @@
   transform-origin: 0% 50%;
 }
 
-.hamburgermenu-container {
-  height: 200vh;
-}
-
+// コンテンツメニュー
 .hamburger-nav {
   opacity: 0;
   visibility: hidden;

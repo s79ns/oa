@@ -4,3 +4,5 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("hamburger-nav").classList.toggle("active");
   });
 });
+
+// DOMContentLoaded ブラウザがHTMLを読み込み、DOMツリーを構築すると発火する
