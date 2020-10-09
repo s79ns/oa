@@ -5,6 +5,12 @@
   background-color: #eee;
   padding: 20px;
   border-radius: 5px;
+  ul {
+    display: none;
+  }
+  ul.active {
+    display: block;
+  }
 }
 
 .accordion-menu a {
