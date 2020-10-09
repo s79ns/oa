@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'uis/index'
   get 'hamburgermenu/index'
   get 'tabmenu/index'
   get 'games/index'
