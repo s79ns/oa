@@ -1,0 +1,30 @@
+.accordion-menu {
+  max-width: 1000px;
+  width: 100%;
+  margin: 50px auto;
+  background-color: #eee;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.accordion-menu a {
+  transition: 0.3s;
+}
+
+.accordion-menu a:hover {
+  opacity: 0.7;
+}
+
+// 親メニューのaタグに適用
+.accordion-menu li > a {
+  display: block;
+  padding: 10px;
+  background-color: #ccc;
+}
+
+// 子メニューのul,aタグに適用
+.accordion-menu li > ul a {
+  display: block;
+  padding: 10px;
+  background-color: #aaa;
+}
