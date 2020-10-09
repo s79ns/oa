@@ -13,11 +13,9 @@
               黒を基調とした背景で閲覧できます
           .darkmode-text
             ダークモード
-        // トグルスイッチ 開始
         %li.toggle-switch
           %input#toggle.toggle-input{type: "checkbox"}/
           %label.toggle-label{for: "toggle"}
-        // トグルスイッチ 終了
         - if user_signed_in?
           %li.header-bar-item
             = link_to "新規投稿", new_post_path, method: :get
