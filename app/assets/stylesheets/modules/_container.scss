@@ -13,14 +13,14 @@
   background-color: #f0f8ff;
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 0 3px grey;
+  box-shadow: 0 0 3px #666;
   &__top-title {
     color: #272727;
     font-weight: 600;
     letter-spacing: 0.5px;
     margin-bottom: 30px;
     i.fas.fa-comment-dots {
-      color: #00bfff;
+      color: #0bf;
     }
   }
   hr {
@@ -67,11 +67,11 @@
     margin-left: 5px;
   }
   .edit-actions-btn {
-    background-color: #3399ff;
+    background-color: #39f;
     border-radius: 15px;
     padding: 5px;
     text-decoration: none;
-    color: white;
+    color: #fff;
     font-size: 12px;
   }
   .like-alia {
@@ -91,7 +91,7 @@
   .pagination {
     display: flex;
     padding: 10px;
-    color: rgba(0, 0, 0, 0.87);
+    color: #000;
     font-size: 15px;
     font-style: normal;
     font-weight: 300;
@@ -130,13 +130,13 @@ h4.debug-tool-text {
   letter-spacing: 0.5px;
   color: #272727;
   i.fas.fa-wrench {
-    color: #999999;
+    color: #999;
   }
   i.fas.fa-sync-alt {
-    color: #33cc66;
+    color: #3c6;
   }
   i.fas.fa-user {
-    color: #ff3333;
+    color: #f33;
   }
 }
 hr {
@@ -167,14 +167,14 @@ li.debug-tool-item {
   background-color: #f0f8ff;
   height: 200px;
   margin-top: 50px;
-  box-shadow: 0 0 3px grey;
+  box-shadow: 0 0 3px #666;
   border-radius: 10px;
   text-align: center;
   hr {
     margin-bottom: 20px;
   }
   i.fas.fa-trophy {
-    color: #ff9933;
+    color: #f93;
   }
 }
 
@@ -210,7 +210,7 @@ i.fa-exclamation-circle:hover .tooltiptext {
   transition: opacity 1s;
   text-align: center;
   opacity: 0;
-  color: #ffffff;
+  color: #fff;
   border-radius: 6px;
   background-color: #1e90ff;
 }
