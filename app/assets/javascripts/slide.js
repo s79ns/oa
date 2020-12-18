@@ -10,10 +10,7 @@ $(function () {
     var findLiFirst = targetObj.find("li:first");
 
     findLi.css({ display: "block", opacity: "0", zIndex: "99" });
-    findLiFirst
-      .css({ zIndex: "100" })
-      .stop()
-      .animate({ opacity: "1" }, fadeSpeed);
+    findLiFirst.css({ zIndex: "100" }).stop().animate({ opacity: "1" }, fadeSpeed);
 
     setInterval(function () {
       findUl
